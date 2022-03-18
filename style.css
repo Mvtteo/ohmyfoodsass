@@ -1,0 +1,256 @@
+@charset "UTF-8";
+body {
+  font-family: "Roboto", "cursive";
+  margin: 0;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  font-family: "Shrikhand", cursive;
+}
+
+#boxheader {
+  width: 100%;
+  height: 18vw;
+  box-shadow: 0px 1px 5px #bbbbbb;
+  margin-top: 0;
+  display: flex;
+  position: relative;
+}
+#boxheader h1 {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+  font-size: 8vw;
+}
+
+#city {
+  display: flex;
+  background-color: #e7e7e7;
+  justify-content: center;
+  align-items: center;
+  height: 15vw;
+}
+#city i {
+  font-size: 5vw;
+}
+#city h2 {
+  margin-left: 3vw;
+  font-size: 5vw;
+}
+
+.discover {
+  background-color: #f7f5f5;
+  height: 80vw;
+}
+.discover__content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.discover__content h3 {
+  font-size: 6vw;
+  font-weight: 900;
+  width: 60%;
+  text-align: center;
+  margin-bottom: 0;
+}
+.discover__content h4 {
+  width: 90%;
+  font-size: 5vw;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 3vw;
+}
+.discover__content .button {
+  margin-top: 2.5vw;
+  background: linear-gradient(#FF79DA, #9356DC);
+  padding: 5.4vw;
+  border-radius: 500px;
+  box-shadow: 0px 5px 10px #aaaaaa;
+}
+.discover__content .button__txt {
+  font-size: 5vw;
+  color: white;
+}
+
+.howtouse, .footer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 124vw;
+}
+.howtouse h5, .footer h5 {
+  font-size: 6vw;
+}
+.howtouse .pannel, .footer .pannel {
+  height: 80vw;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+.howtouse .pannel .choose, .footer .pannel .choose, .howtouse .pannel .taste, .footer .pannel .taste, .howtouse .pannel .build, .footer .pannel .build {
+  box-shadow: 0px 5px 15px #dbdbdb;
+  border-radius: 25px;
+  width: 94%;
+  height: 22vw;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-left: 3vw;
+}
+.howtouse .pannel .choose__content, .footer .pannel .choose__content, .howtouse .pannel .taste__content, .footer .pannel .taste__content, .howtouse .pannel .build__content, .footer .pannel .build__content {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.howtouse .pannel .choose__number, .footer .pannel .choose__number, .howtouse .pannel .taste__number, .footer .pannel .taste__number, .howtouse .pannel .build__number, .footer .pannel .build__number {
+  background-color: #9356DC;
+  height: 7vw;
+  width: 7vw;
+  border-radius: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -3vw;
+}
+.howtouse .pannel .choose__number--value, .footer .pannel .choose__number--value {
+  color: white;
+  font-size: 3.6vw;
+}
+.howtouse .pannel .choose__instruction, .footer .pannel .choose__instruction, .howtouse .pannel .taste__instruction, .footer .pannel .taste__instruction, .howtouse .pannel .build__instruction, .footer .pannel .build__instruction {
+  font-size: 4vw;
+  margin-left: 5vw;
+}
+.howtouse .pannel .build__number--value, .footer .pannel .build__number--value {
+  color: white;
+  font-size: 3.6vw;
+}
+.howtouse .pannel .taste__number--value, .footer .pannel .taste__number--value {
+  color: white;
+  font-size: 3.6vw;
+}
+.howtouse i, .footer i {
+  font-size: 5vw;
+  color: grey;
+  margin-left: 5vw;
+}
+
+.grey {
+  height: 310vw;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+}
+.grey h5 {
+  font-size: 6vw;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 13vw;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.grey .restaurants {
+  height: 270vw;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vw;
+}
+.grey .restaurants .box {
+  display: flex;
+  flex-direction: column;
+  height: 64vw;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 12px lightgrey;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grey .restaurants .box__img--palette, .grey .restaurants .box__img--delice, .grey .restaurants .box__img--française, .grey .restaurants .box__img--note {
+  background-image: url("images/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  height: 44vw;
+  width: 100%;
+  background-size: cover;
+  background-position: bottom;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.grey .restaurants .box__img--note {
+  background-image: url("images/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-position-y: 0px;
+}
+.grey .restaurants .box__img--française {
+  background-image: url("images/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.grey .restaurants .box__img--delice {
+  background-image: url("images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+.grey .restaurants .box__group {
+  display: flex;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.grey .restaurants .box__txt {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.5vw;
+}
+.grey .restaurants .box__txt--name {
+  font-size: 4.5vw;
+  font-weight: 900;
+}
+.grey .restaurants .box__txt--place {
+  font-size: 4vw;
+  margin-top: 1vw;
+}
+.grey .restaurants .box i {
+  color: black;
+  font-size: 6vw;
+}
+
+footer {
+  width: 100%;
+  background-color: #353535;
+}
+
+.footer {
+  color: white;
+  height: 48vw;
+}
+.footer__logo {
+  font-family: "shrikhand", "cursive";
+  font-size: 4vw;
+  margin-top: 5vw;
+}
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+  height: 100px;
+}
+.footer ul li {
+  margin-top: 1.5vw;
+  font-size: 4vw;
+}
+.footer ul i {
+  margin-left: 0;
+  color: white;
+  font-size: 2.5vw;
+  margin-right: 3vw;
+}
+.footer ul span i {
+  margin-right: 2vw;
+}
+
+/*# sourceMappingURL=style.css.map */
