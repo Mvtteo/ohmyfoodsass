@@ -37,12 +37,13 @@ header{
     display: flex;
     align-items: center;
     h1{
-        margin-left: 102.802px;
-        margin-right: 144.302px;
+        margin-left: 20.5604vw;
+        margin-right: 28.8604vw;
+        font-size: 7vw;
     }
     i{
         margin-left: $regularsize;
-        font-size: 4vw;
+        font-size: 6vw;
     }
 }
 
@@ -75,7 +76,7 @@ header{
 
 .menu{
     @include center;
-    height: 1475px;
+    min-height: 295vw;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     background-color: #f6f6f6;
@@ -95,7 +96,8 @@ header{
             margin-bottom: 50px;
         }
         i{
-            font-size: $regularsize;
+            font-size: 25px;
+            margin-bottom: 30px;
         }
     }
     &__dish{
@@ -115,11 +117,11 @@ header{
             justify-content: space-between;
             width: 90%;
             @include center;
-            margin-top: $regularsize;
+            margin-top: 25px;
             background-color: white;
             border-radius: 15px;
             padding: 2vw;
-            height: 60px;
+            min-height: 12vw;
             box-shadow: 0px 0px 12px lightgrey;
             .grouptxt{
                 @include column;
@@ -127,7 +129,7 @@ header{
                     margin-bottom: 1vw;
                     margin-top: 1vw;
                     font-weight: 900;
-                    font-size: 4vw;
+                    font-size: 20px;
                 }
             }
             .price{
@@ -143,14 +145,16 @@ header{
         padding: 15px;
         border-radius: 500px;
         box-shadow: 0px 5px 10px #aaaaaa;
-        margin-bottom: 100px;
+        margin-bottom: 20vw;
         margin-top: 30px;
         @include center;
         &__txt{
-            font-size: $regularsize;
+            font-size: 20px;
             color: white;
-            @include center;
-            width: 138px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -178,7 +182,8 @@ header{
             margin-bottom: 50px;
         }
         i{
-            font-size: $regularsize;
+            font-size: 25px;
+            margin-bottom: 30px;
         }
     }
     &__dish{
@@ -198,11 +203,11 @@ header{
             justify-content: space-between;
             width: 90%;
             @include center;
-            margin-top: $regularsize;
+            margin-top: 25px;
             background-color: white;
             border-radius: 15px;
             padding: 2vw;
-            height: 60px;
+            min-height: 12vw;
             box-shadow: 0px 0px 12px lightgrey;
             .grouptxt{
                 @include column;
@@ -210,13 +215,13 @@ header{
                     margin-bottom: 1vw;
                     margin-top: 1vw;
                     font-weight: 900;
-                    font-size: 4vw;
                 }
             }
             .price{
             font-weight: bold;
             margin-top: 7vw;
             margin-right: 2vw;
+            font-size: 3vw;
             }
         }
     }
@@ -230,16 +235,16 @@ header{
         margin-top: 30px;
         @include center;
         &__txt{
-            font-size: $regularsize;
+            font-size: 20px;
             color: white;
-            @include center;
-            width: 138px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
 }
 
-//footer
 
 ///footer
 
@@ -257,7 +262,7 @@ footer{
     height: 240px;
     &__logo{
         font-family: 'shrikhand', 'cursive';
-        font-size: 4vw;
+        font-size: 20px;
         margin-top: $regularsize;
     }
     ul{
@@ -266,12 +271,12 @@ footer{
         height: 100px;
         li{
             margin-top: 1.5vw;
-            font-size: 4vw;
+            font-size: 20px;
         }
         i{
             margin-left: 0;
             color: white;
-            font-size: 2.5vw;
+            font-size: 12.5px;
             margin-right: 3vw;
         }
         span i{

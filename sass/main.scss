@@ -1,29 +1,9 @@
 
 //header
 
-$fullwidth:(100%);
-$regularsize:(5vw);
-$subtitle:(6vw);
-
-$primary:#9356DC;
-$secondary:#FF79DA;
-$tertiary:#99E2D0;
-$background: #F6f6f6;
-$white: #FFFFFF;
-
-@mixin column{
-    display: flex;
-    flex-direction: column;
-}
-
-@mixin marginleft{
-    margin-left: 4vw;
-}
-
-@mixin center{
-    margin-left: auto;
-    margin-right: auto;
-}
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./layout/layouts";
 
 // font 
 body{
@@ -92,22 +72,7 @@ header{
     font-family: 'Shrikhand', cursive;
 }
 
-#boxheader{
-    width: $fullwidth;
-    height: 18vw;
-	box-shadow: 0px 1px 5px #bbbbbb;
-    margin-top: 0;
-    display: flex;
-    position: relative;
-    animation: nothing 2.5s;
-        h1{
-        display: inline-block;
-        margin-left: auto;
-        margin-right: auto;
-        align-self: center;
-        font-size: 8vw;
-    }
-}
+
 
 //section
 ///ville
@@ -346,41 +311,18 @@ footer{
     background-color: #353535;
 }
 
-.footer{
-    @extend .howtouse;
-    color: white;
-    height: 48vw;
-    &__logo{
-        font-family: 'shrikhand', 'cursive';
-        font-size: 4vw;
-        margin-top: $regularsize;
-    }
-    ul{
-        list-style-type: none;
-        padding: 0;
-        height: 100px;
-        li{
-            margin-top: 1.5vw;
-            font-size: 4vw;
-        }
-        i{
-            margin-left: 0;
-            color: white;
-            font-size: 2.5vw;
-            margin-right: 3vw;
-        }
-        span i{
-            margin-right: 2vw;
-        }
-    }
-}
+
 
 .menuglobal
 {
     display: none;
 }
 
-@media only screen and (min-width: 768px){
+.footer{
+    height: 45vw;
+}
+
+@media only screen and (min-width: 993px){
 // font 
 body{
     font-family: 'Roboto', 'cursive';
@@ -824,5 +766,16 @@ header{
                 }
             }
         }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px){
+
+
+
+
+
+
+
 
 }

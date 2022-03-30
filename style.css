@@ -1,4 +1,49 @@
 @charset "UTF-8";
+#boxheader {
+  width: 100%;
+  height: 18vw;
+  box-shadow: 0px 1px 5px #bbbbbb;
+  margin-top: 0;
+  display: flex;
+  position: relative;
+  animation: nothing 2.5s;
+}
+#boxheader h1 {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+  font-size: 8vw;
+}
+
+.footer {
+  color: white;
+  height: 48vw;
+}
+.footer__logo {
+  font-family: "shrikhand", "cursive";
+  font-size: 4vw;
+  margin-top: 5vw;
+}
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+  height: 100px;
+}
+.footer ul li {
+  margin-top: 1.5vw;
+  font-size: 4vw;
+}
+.footer ul i {
+  margin-left: 0;
+  color: white;
+  font-size: 2.5vw;
+  margin-right: 3vw;
+}
+.footer ul span i {
+  margin-right: 2vw;
+}
+
 body {
   font-family: "Roboto", "cursive";
   margin: 0;
@@ -62,23 +107,6 @@ footer {
 header {
   width: 100%;
   font-family: "Shrikhand", cursive;
-}
-
-#boxheader {
-  width: 100%;
-  height: 18vw;
-  box-shadow: 0px 1px 5px #bbbbbb;
-  margin-top: 0;
-  display: flex;
-  position: relative;
-  animation: nothing 2.5s;
-}
-#boxheader h1 {
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  align-self: center;
-  font-size: 8vw;
 }
 
 #city {
@@ -149,7 +177,7 @@ header {
   display: flex;
   flex-direction: column;
 }
-.howtouse .pannel .choose, .footer .pannel .choose, .howtouse .pannel .taste, .footer .pannel .taste, .howtouse .pannel .build, .footer .pannel .build {
+.howtouse .pannel .choose, .howtouse .pannel .taste, .howtouse .pannel .build, .footer .pannel .choose, .footer .pannel .taste, .footer .pannel .build {
   box-shadow: 0px 5px 15px #dbdbdb;
   border-radius: 25px;
   width: 94%;
@@ -159,13 +187,13 @@ header {
   align-content: center;
   margin-left: 3vw;
 }
-.howtouse .pannel .choose__content, .footer .pannel .choose__content, .howtouse .pannel .taste__content, .footer .pannel .taste__content, .howtouse .pannel .build__content, .footer .pannel .build__content {
+.howtouse .pannel .choose__content, .howtouse .pannel .taste__content, .howtouse .pannel .build__content, .footer .pannel .choose__content, .footer .pannel .taste__content, .footer .pannel .build__content {
   width: 80%;
   display: flex;
   align-items: center;
   align-content: center;
 }
-.howtouse .pannel .choose__number, .footer .pannel .choose__number, .howtouse .pannel .taste__number, .footer .pannel .taste__number, .howtouse .pannel .build__number, .footer .pannel .build__number {
+.howtouse .pannel .choose__number, .howtouse .pannel .taste__number, .howtouse .pannel .build__number, .footer .pannel .choose__number, .footer .pannel .taste__number, .footer .pannel .build__number {
   background-color: #9356DC;
   height: 7vw;
   width: 7vw;
@@ -179,7 +207,7 @@ header {
   color: white;
   font-size: 3.6vw;
 }
-.howtouse .pannel .choose__instruction, .footer .pannel .choose__instruction, .howtouse .pannel .taste__instruction, .footer .pannel .taste__instruction, .howtouse .pannel .build__instruction, .footer .pannel .build__instruction {
+.howtouse .pannel .choose__instruction, .howtouse .pannel .taste__instruction, .howtouse .pannel .build__instruction, .footer .pannel .choose__instruction, .footer .pannel .taste__instruction, .footer .pannel .build__instruction {
   font-size: 4vw;
   margin-left: 5vw;
 }
@@ -285,39 +313,15 @@ footer {
   background-color: #353535;
 }
 
-.footer {
-  color: white;
-  height: 48vw;
-}
-.footer__logo {
-  font-family: "shrikhand", "cursive";
-  font-size: 4vw;
-  margin-top: 5vw;
-}
-.footer ul {
-  list-style-type: none;
-  padding: 0;
-  height: 100px;
-}
-.footer ul li {
-  margin-top: 1.5vw;
-  font-size: 4vw;
-}
-.footer ul i {
-  margin-left: 0;
-  color: white;
-  font-size: 2.5vw;
-  margin-right: 3vw;
-}
-.footer ul span i {
-  margin-right: 2vw;
-}
-
 .menuglobal {
   display: none;
 }
 
-@media only screen and (min-width: 768px) {
+.footer {
+  height: 45vw;
+}
+
+@media only screen and (min-width: 993px) {
   body {
     font-family: "Roboto", "cursive";
     margin: 0;
@@ -414,7 +418,7 @@ footer {
     display: flex;
     flex-direction: row;
   }
-  .howtouse .pannel .choose, .footer .pannel .choose, .howtouse .pannel .build, .howtouse .pannel .taste, .footer .pannel .build, .footer .pannel .taste {
+  .howtouse .pannel .choose, .footer .pannel .choose, .howtouse .pannel .build, .footer .pannel .build, .howtouse .pannel .taste, .footer .pannel .taste {
     box-shadow: 0px 5px 15px #dbdbdb;
     border-radius: 25px;
     width: 30%;
@@ -424,13 +428,13 @@ footer {
     align-content: center;
     margin-left: 1vw;
   }
-  .howtouse .pannel .choose__content, .footer .pannel .choose__content, .howtouse .pannel .build__content, .howtouse .pannel .taste__content, .footer .pannel .build__content, .footer .pannel .taste__content {
+  .howtouse .pannel .choose__content, .footer .pannel .choose__content, .howtouse .pannel .build__content, .footer .pannel .build__content, .howtouse .pannel .taste__content, .footer .pannel .taste__content {
     width: 100%;
     display: flex;
     align-items: center;
     align-content: center;
   }
-  .howtouse .pannel .choose__number, .footer .pannel .choose__number, .howtouse .pannel .build__number, .howtouse .pannel .taste__number, .footer .pannel .build__number, .footer .pannel .taste__number {
+  .howtouse .pannel .choose__number, .footer .pannel .choose__number, .howtouse .pannel .build__number, .footer .pannel .build__number, .howtouse .pannel .taste__number, .footer .pannel .taste__number {
     background-color: #9356DC;
     height: 2vw;
     width: 2vw;
@@ -444,7 +448,7 @@ footer {
     color: white;
     font-size: 1.2vw;
   }
-  .howtouse .pannel .choose__instruction, .footer .pannel .choose__instruction, .howtouse .pannel .build__instruction, .howtouse .pannel .taste__instruction, .footer .pannel .build__instruction, .footer .pannel .taste__instruction {
+  .howtouse .pannel .choose__instruction, .footer .pannel .choose__instruction, .howtouse .pannel .build__instruction, .footer .pannel .build__instruction, .howtouse .pannel .taste__instruction, .footer .pannel .taste__instruction {
     font-size: 1.5vw;
     margin-left: 2vw;
   }

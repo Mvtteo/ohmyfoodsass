@@ -10,12 +10,13 @@ header {
   align-items: center;
 }
 header h1 {
-  margin-left: 102.802px;
-  margin-right: 144.302px;
+  margin-left: 20.5604vw;
+  margin-right: 28.8604vw;
+  font-size: 7vw;
 }
 header i {
   margin-left: 5vw;
-  font-size: 4vw;
+  font-size: 6vw;
 }
 
 .background, .background3 {
@@ -42,7 +43,7 @@ header i {
 .menu {
   margin-left: auto;
   margin-right: auto;
-  height: 1475px;
+  min-height: 295vw;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   background-color: #f6f6f6;
@@ -65,7 +66,8 @@ header i {
   margin-bottom: 50px;
 }
 .menu__title i {
-  font-size: 5vw;
+  font-size: 25px;
+  margin-bottom: 30px;
 }
 .menu__dish--title {
   display: flex;
@@ -85,11 +87,11 @@ header i {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5vw;
+  margin-top: 25px;
   background-color: white;
   border-radius: 15px;
   padding: 2vw;
-  height: 60px;
+  min-height: 12vw;
   box-shadow: 0px 0px 12px lightgrey;
 }
 .menu__dish--box .grouptxt {
@@ -100,7 +102,7 @@ header i {
   margin-bottom: 1vw;
   margin-top: 1vw;
   font-weight: 900;
-  font-size: 4vw;
+  font-size: 20px;
 }
 .menu__dish--box .price {
   font-weight: bold;
@@ -113,17 +115,18 @@ header i {
   padding: 15px;
   border-radius: 500px;
   box-shadow: 0px 5px 10px #aaaaaa;
-  margin-bottom: 100px;
+  margin-bottom: 20vw;
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
 }
 .menu .button__txt {
-  font-size: 5vw;
+  font-size: 20px;
   color: white;
-  margin-left: auto;
-  margin-right: auto;
-  width: 138px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu2 {
@@ -152,7 +155,8 @@ header i {
   margin-bottom: 50px;
 }
 .menu2__title i {
-  font-size: 5vw;
+  font-size: 25px;
+  margin-bottom: 30px;
 }
 .menu2__dish--title {
   display: flex;
@@ -172,11 +176,11 @@ header i {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5vw;
+  margin-top: 25px;
   background-color: white;
   border-radius: 15px;
   padding: 2vw;
-  height: 60px;
+  min-height: 12vw;
   box-shadow: 0px 0px 12px lightgrey;
 }
 .menu2__dish--box .grouptxt {
@@ -187,12 +191,12 @@ header i {
   margin-bottom: 1vw;
   margin-top: 1vw;
   font-weight: 900;
-  font-size: 4vw;
 }
 .menu2__dish--box .price {
   font-weight: bold;
   margin-top: 7vw;
   margin-right: 2vw;
+  font-size: 3vw;
 }
 .menu2 .button {
   width: 50%;
@@ -206,11 +210,11 @@ header i {
   margin-right: auto;
 }
 .menu2 .button__txt {
-  font-size: 5vw;
+  font-size: 20px;
   color: white;
-  margin-left: auto;
-  margin-right: auto;
-  width: 138px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
@@ -229,7 +233,7 @@ footer {
 }
 .footer__logo {
   font-family: "shrikhand", "cursive";
-  font-size: 4vw;
+  font-size: 20px;
   margin-top: 5vw;
 }
 .footer ul {
@@ -239,12 +243,12 @@ footer {
 }
 .footer ul li {
   margin-top: 1.5vw;
-  font-size: 4vw;
+  font-size: 20px;
 }
 .footer ul i {
   margin-left: 0;
   color: white;
-  font-size: 2.5vw;
+  font-size: 12.5px;
   margin-right: 3vw;
 }
 .footer ul span i {
