@@ -4,6 +4,7 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./layout/layouts";
+@import "./Composants/compononents";
 
 // font 
 body{
@@ -122,6 +123,10 @@ header{
             padding: 5.4vw;
             border-radius: 500px;
             box-shadow: 0px 5px 10px #aaaaaa;
+            &:hover{
+                background: linear-gradient(#fe89de, #9f6ae0);
+                box-shadow: 0px 5px 10px #888888;
+            }
             &__txt{
                 font-size: $regularsize;
                 color: white;
@@ -292,10 +297,6 @@ header{
                 font-size: 4vw;
                 margin-top: 1vw;
             }
-        }
-        i{
-            color: black;
-            font-size: $subtitle;
         }
     }
     }
@@ -527,7 +528,7 @@ header{
     .box{
         @include column;
         height: 14vw;
-        width: 20%;
+        width: 23%;
         border-radius: 20px;
         box-shadow: 0px 0px 12px lightgrey;
         margin-left: 0;
@@ -578,10 +579,7 @@ header{
                 margin-top: 0.4vw;
             }
         }
-        i{
-            color: black;
-            font-size: 1vw;
-        }
+        
     }
     }
 }
@@ -594,9 +592,9 @@ header{
         display: flex;
         justify-content: space-between;
         .menu{
-            width: 20%;
+            width: 23%;
             &__dish{
-                width: 17.88640625vw;
+                width: 20.5vw;
                 &--title{
                     @include column;
                     .line{
@@ -618,8 +616,24 @@ header{
                     padding: 0vw;
                     height: 3.5vw;
                     box-shadow: 0px 0px 12px lightgrey;
-                    &:active{
-                        background-color: $white;
+                    overflow: hidden;
+                    &:hover i{
+                        animation: translate 2s cubic-bezier(.26,.96,.42,1) 0.1s;
+                        animation-fill-mode: backwards;
+                    }
+                    &:hover .animation .anim{
+                        animation: slide 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
+                        transform-origin: right;
+                        animation-fill-mode: backwards;
+                    }
+                    &:hover .price{
+                        animation: price 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
+                    }
+                    &:hover .grouptxt .dishname{
+                        animation: text 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
+                    }
+                    &:hover .grouptxt .accompaniment{
+                        animation: text 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
                     }
                     &:hover{
                         cursor: pointer; 
@@ -633,16 +647,47 @@ header{
                             margin-top: 0vw;
                             font-weight: 900;
                             font-size: 0.9vw;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            width: 300px;
+                            height: 25px;
                         }
                         .accompaniment{
                             font-size: 0.8vw;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            width: 300px;
+                            height: 20px;
                             }
                         }
                         .price{
                             font-weight: bold;
                             margin-top: 1.5vw;
-                            margin-right: 0.5vw;
+                            margin-right: -6vw;
                             font-size: 0.7vw;
+                            }
+                            .animation{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-right: -28px;
+                                .anim{    
+                                    background-color: #99E2D0;
+                                    border-top-right-radius: 15px;
+                                    border-bottom-right-radius: 15px;
+                                    width: 75px;
+                                    height: 100%;
+                                    opacity: 0;
+                                    justify-content: center;
+                                    align-items: center;
+                        
+                                }
+                                i{
+                                    font-size: 25px;
+                                    color: white;
+                                }
                             }
                 }
             }
@@ -650,10 +695,48 @@ header{
     }
 }
 
+@keyframes price{
+    0%{
+        margin-right: -6vw;
+    }
+    100%{
+        margin-right: -10px;
+    }
+}
+
+@keyframes text{
+    0%{
+        width: 300px;
+    }
+    100%{
+        width: 250px;
+    }
+}
+
+@keyframes slide{
+    0%{
+        transform: scaleX(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+@keyframes translate{
+    0%{
+        transform: translateX(0px) rotate(0deg);
+    }
+    100%{
+        transform: translateX(-50px) rotate(360deg);
+    }
+}
+
 .menu{
-    width: 20%;
+    width: 23%;
     &__dish2{
-        width: 17.88640625vw;
+        width: 20.5vw;
         margin-top: 4.5vw;
         &--title{
             @include column;
@@ -676,8 +759,24 @@ header{
             padding: 0vw;
             height: 3.5vw;
             box-shadow: 0px 0px 12px lightgrey;
-            &:active{
-                background-color: $white;
+            overflow: hidden;
+            &:hover i{
+                animation: translate 2s cubic-bezier(.26,.96,.42,1) 0.1s;
+                animation-fill-mode: backwards;
+            }
+            &:hover .animation .anim{
+                animation: slide 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
+                transform-origin: right;
+                animation-fill-mode: backwards;
+            }
+            &:hover .price{
+                animation: price 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
+            }
+            &:hover .grouptxt .dishname{
+                animation: text 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
+            }
+            &:hover .grouptxt .accompaniment{
+                animation: text 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
             }
             &:hover{
                 cursor: pointer; 
@@ -691,16 +790,47 @@ header{
                     margin-top: 0vw;
                     font-weight: 900;
                     font-size: 0.9vw;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    width: 300px;
+                    height: 25px;
                 }
                 .accompaniment{
                     font-size: 0.8vw;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    width: 300px;
+                    height: 20px;
                     }
                 }
                 .price{
                     font-weight: bold;
                     margin-top: 1.5vw;
-                    margin-right: 0.5vw;
+                    margin-right: -6vw;
                     font-size: 0.7vw;
+                    }
+                    .animation{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: -28px;
+                        .anim{    
+                            background-color: #99E2D0;
+                            border-top-right-radius: 15px;
+                            border-bottom-right-radius: 15px;
+                            width: 75px;
+                            height: 100%;
+                            opacity: 0;
+                            justify-content: center;
+                            align-items: center;
+                
+                        }
+                        i{
+                            font-size: 25px;
+                            color: white;
+                        }
                     }
         }
     }
@@ -766,16 +896,5 @@ header{
                 }
             }
         }
-
-}
-
-@media only screen and (min-width: 769px) and (max-width: 992px){
-
-
-
-
-
-
-
 
 }

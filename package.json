@@ -1,11 +1,19 @@
 {
-  "name": "omf",
+  "name": "test",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/menu.scss:menu.css"
+    "sass": "sass --watch ./sass/menu-updated.scss:menu-updated.css"
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mvtteo/ohmyfood.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mvtteo/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Mvtteo/ohmyfood#readme",
   "description": ""
 }
