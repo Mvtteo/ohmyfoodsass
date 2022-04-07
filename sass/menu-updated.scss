@@ -38,13 +38,20 @@ header{
     display: flex;
     align-items: center;
     h1{
-        margin-left: 20.5604vw;
-        margin-right: 28.8604vw;
         font-size: 7vw;
+        margin-left: auto;
+        margin-right: auto;
+        @media only screen and (min-width: 500px) and (max-width: 992px){
+            font-size: 35px;
+        }
     }
     i{
         margin-left: $regularsize;
         font-size: 6vw;
+        position: absolute;
+        @media only screen and (min-width: 500px) and (max-width: 992px){
+            font-size: 30px;
+        }
     }
 }
 
@@ -121,11 +128,6 @@ header{
             font-size: 27px;
             margin-top: 2px;
             margin-left: 2px;
-            i{
-                @media only screen and (min-width: 500px) and (max-width: 992px){
-                    font-size: 22px;
-                }
-            }
             }
         }
     }
@@ -205,7 +207,7 @@ header{
                         font-size: 6vw;
                     }
                     @media only screen and (min-width: 500px) and (max-width: 992px){
-                        margin-bottom: 1vw;
+                        margin-bottom: 0vw;
                         margin-top: 1vw;
                         font-size: 20px;
                     }
@@ -250,12 +252,18 @@ header{
                 margin-left: 8vw;
                 font-size: 15px;
             }
+            @media only screen and (min-width: 610px) and (max-width: 992px){
+                margin-left: 11vw;
+            }
             }
             .animation{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-right: -5.6vw;
+                margin-right: -28px;
+                @media only screen and (max-width: 210px){
+                    margin-right: -35px;
+                }  
                 .anim{    
                     background-color: #99E2D0;
                     border-top-right-radius: 15px;
@@ -264,7 +272,7 @@ header{
                     height: 100%;
                     opacity: 0;
                     justify-content: center;
-                    align-items: center;      
+                    align-items: center;     
                 }
                 i{
                     font-size: 25px;
@@ -282,6 +290,13 @@ header{
         margin-bottom: 100px;
         margin-top: 30px;
         @include center;
+        @media only screen and (min-width: 500px) and (max-width: 992px){
+            width: 250px;
+        }
+        &:hover{
+            background: linear-gradient(#fe89de, #9f6ae0);
+            box-shadow: 0px 5px 10px #888888;
+        }
         &__txt{
             font-size: 20px;
             color: white;
@@ -306,7 +321,7 @@ header{
 
 .menu2{
     @include center;
-    height: 1555px;
+    height: 1270px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     background-color: #f6f6f6;
@@ -338,7 +353,7 @@ header{
                 font-size: 30px;
             }
             .fullheart{
-            font-size: 24px;
+            font-size: 27px;
             margin-top: 2px;
             margin-left: 2px;
             }
@@ -356,7 +371,7 @@ header{
                 margin-bottom: 5px;
             }
         }
-        &--box{
+        &--box, &--box2, &--box3{
             display: flex;
             justify-content: space-between;
             width: 90%;
@@ -370,6 +385,10 @@ header{
             opacity: 0;
             animation: pop 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
             animation-fill-mode: forwards;
+            @media only screen and (min-width: 500px) and (max-width: 992px){
+                height: 60px;
+                min-height: 0px;  
+            }
             &:hover i{
                 animation: translate 2s cubic-bezier(.26,.96,.42,1) 0.1s;
                 animation-fill-mode: backwards;
@@ -379,9 +398,6 @@ header{
                 transform-origin: right;
                 animation-fill-mode: backwards;
             }
-            &:hover .price{
-                animation: price 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
-            }
             &:hover .grouptxt .dishname{
                 animation: text 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
             }
@@ -390,47 +406,101 @@ header{
             }
             .grouptxt{
                 @include column;
-                margin-left: 5px;
+                margin-left: 10px;
+                margin-top: 5px;
+                width: 70vw;
+                @media screen and (max-width: 365px){
+                    flex-wrap: wrap;
+                }
+                @media only screen and (min-width: 500px) and (max-width: 992px){
+                    margin-top: 2.5px;
+                }
                 .dishname{
                     margin-bottom: 0.5vw;
                     margin-top: 0.5vw;
                     font-weight: 900;
-                    font-size: 20px;
+                    font-size: 4vw;
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
-                    width: 300px;
-                    height: 25px;
+                    width: 70vw;
+                    min-height: 25px;
+                    @media screen and (max-width: 365px){
+                        font-size: 5vw;
+                        text-overflow: clip;
+                        overflow: visible;
+                        white-space: normal;
+                    }
+                    @media screen and (max-width: 240px){
+                        font-size: 6vw;
+                    }
+                    @media only screen and (min-width: 500px) and (max-width: 992px){
+                        margin-bottom: 0vw;
+                        margin-top: 1vw;
+                        font-size: 20px;
+                    }
                 }
                 .accompaniment{
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
-                    width: 300px;
-                    height: 20px;
+                    width: 70vw;
+                    min-height: 25px;
+                    font-size: 3.5vw;
+                    @media screen and (max-width: 365px){
+                        font-size: 4.5vw;
+                        text-overflow: clip;
+                        overflow: visible;
+                        white-space: normal;
+                        margin-bottom: 5px;
+                    }
+                    @media screen and (max-width: 240px){
+                        font-size: 5.5vw;
+                    }
+                    @media only screen and (min-width: 500px) and (max-width: 992px){
+                        font-size: 15px;
+                    }
                 }
             }
             .price{
             font-weight: bold;
-            margin-top: 7vw;
-            margin-right: 0vw;
-            font-size: 15px;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 10vw;
+            font-size: 4vw;
+            @media screen and (max-width: 365px){
+                font-size: 5vw;
+                margin-left: 5vw;
+            }
+            @media screen and (max-width: 240px){
+                font-size: 6vw;
+                margin-left: 3vw;
+            }
+            @media only screen and (min-width: 500px) and (max-width: 992px){
+                margin-left: 8vw;
+                font-size: 15px;
+            }
+            @media only screen and (min-width: 610px) and (max-width: 992px){
+                margin-left: 11vw;
+            }
             }
             .animation{
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 margin-right: -28px;
+                @media only screen and (max-width: 210px){
+                    margin-right: -35px;
+                }  
                 .anim{    
                     background-color: #99E2D0;
                     border-top-right-radius: 15px;
                     border-bottom-right-radius: 15px;
-                    width: 75px;
+                    width: 70px;
                     height: 100%;
                     opacity: 0;
                     justify-content: center;
-                    align-items: center;
-        
+                    align-items: center;     
                 }
                 i{
                     font-size: 25px;
@@ -448,6 +518,13 @@ header{
         margin-bottom: 100px;
         margin-top: 30px;
         @include center;
+        @media only screen and (min-width: 500px) and (max-width: 992px){
+            width: 250px;
+        }
+        &:hover{
+            background: linear-gradient(#fe89de, #9f6ae0);
+            box-shadow: 0px 5px 10px #888888;
+        }
         &__txt{
             font-size: 20px;
             color: white;
@@ -480,7 +557,10 @@ footer{
     &__logo{
         font-family: 'shrikhand', 'cursive';
         font-size: 20px;
-        margin-top: $regularsize;
+        margin-top: 20px;
+        @media only screen and (min-width: 500px) and (max-width: 992px){
+            font-size: 35px;
+        }
     }
     ul{
         list-style-type: none;
@@ -489,6 +569,9 @@ footer{
         li{
             margin-top: 1.5vw;
             font-size: 20px;
+            @media only screen and (max-width: 250px){
+            margin-top: 3vw;
+            }
         }
         i{
             margin-left: 0;
@@ -528,12 +611,29 @@ footer{
         }
     }
     100%{
-        width: 40vw;
+        width: 50vw;
         @media only screen and (min-width: 500px) and (max-width: 992px){
             width: 250px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
-    }   
+    }
 }
+@media only screen and (min-width: 150px) and (max-width: 270px){
+    @keyframes text{
+        0%{
+            width: 70vw;
+        }
+        100%{
+            width: 25vw;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+}
+
 
 @keyframes slide{
     0%{

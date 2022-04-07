@@ -57,7 +57,7 @@
   .heart .fullheart {
     z-index: 1;
     opacity: 0;
-    color: #99E2D0;
+    color: #9356DC;
     width: 90%;
     height: 90%;
     font-size: 1vw;
@@ -77,13 +77,24 @@ header {
   align-items: center;
 }
 header h1 {
-  margin-left: 20.5604vw;
-  margin-right: 28.8604vw;
   font-size: 7vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 500px) and (max-width: 992px) {
+  header h1 {
+    font-size: 35px;
+  }
 }
 header i {
   margin-left: 5vw;
   font-size: 6vw;
+  position: absolute;
+}
+@media only screen and (min-width: 500px) and (max-width: 992px) {
+  header i {
+    font-size: 30px;
+  }
 }
 
 .background, .background3 {
@@ -159,11 +170,6 @@ header i {
   font-size: 27px;
   margin-top: 2px;
   margin-left: 2px;
-}
-@media only screen and (min-width: 500px) and (max-width: 992px) {
-  .menu__title .heart .fullheart i {
-    font-size: 22px;
-  }
 }
 .menu__dish--title {
   display: flex;
@@ -257,7 +263,7 @@ header i {
 }
 @media only screen and (min-width: 500px) and (max-width: 992px) {
   .menu__dish--box .grouptxt .dishname, .menu__dish--box2 .grouptxt .dishname, .menu__dish--box3 .grouptxt .dishname {
-    margin-bottom: 1vw;
+    margin-bottom: 0vw;
     margin-top: 1vw;
     font-size: 20px;
   }
@@ -314,11 +320,21 @@ header i {
     font-size: 15px;
   }
 }
+@media only screen and (min-width: 610px) and (max-width: 992px) {
+  .menu__dish--box .price, .menu__dish--box2 .price, .menu__dish--box3 .price {
+    margin-left: 11vw;
+  }
+}
 .menu__dish--box .animation, .menu__dish--box2 .animation, .menu__dish--box3 .animation {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: -5.6vw;
+  margin-right: -28px;
+}
+@media only screen and (max-width: 210px) {
+  .menu__dish--box .animation, .menu__dish--box2 .animation, .menu__dish--box3 .animation {
+    margin-right: -35px;
+  }
 }
 .menu__dish--box .animation .anim, .menu__dish--box2 .animation .anim, .menu__dish--box3 .animation .anim {
   background-color: #99E2D0;
@@ -345,6 +361,15 @@ header i {
   margin-left: auto;
   margin-right: auto;
 }
+@media only screen and (min-width: 500px) and (max-width: 992px) {
+  .menu .button {
+    width: 250px;
+  }
+}
+.menu .button:hover {
+  background: linear-gradient(#fe89de, #9f6ae0);
+  box-shadow: 0px 5px 10px #888888;
+}
 .menu .button__txt {
   font-size: 20px;
   color: white;
@@ -366,7 +391,7 @@ header i {
 .menu2 {
   margin-left: auto;
   margin-right: auto;
-  height: 1555px;
+  height: 1270px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   background-color: #f6f6f6;
@@ -402,7 +427,7 @@ header i {
   font-size: 30px;
 }
 .menu2__title .heart .fullheart {
-  font-size: 24px;
+  font-size: 27px;
   margin-top: 2px;
   margin-left: 2px;
 }
@@ -418,7 +443,7 @@ header i {
 .menu2__dish--title h3 {
   margin-bottom: 5px;
 }
-.menu2__dish--box {
+.menu2__dish--box, .menu2__dish--box2, .menu2__dish--box3 {
   display: flex;
   justify-content: space-between;
   width: 90%;
@@ -434,70 +459,154 @@ header i {
   animation: pop 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.1s;
   animation-fill-mode: forwards;
 }
-.menu2__dish--box:hover i {
+@media only screen and (min-width: 500px) and (max-width: 992px) {
+  .menu2__dish--box, .menu2__dish--box2, .menu2__dish--box3 {
+    height: 60px;
+    min-height: 0px;
+  }
+}
+.menu2__dish--box:hover i, .menu2__dish--box2:hover i, .menu2__dish--box3:hover i {
   animation: translate 2s cubic-bezier(0.26, 0.96, 0.42, 1) 0.1s;
   animation-fill-mode: backwards;
 }
-.menu2__dish--box:hover .animation .anim {
+.menu2__dish--box:hover .animation .anim, .menu2__dish--box2:hover .animation .anim, .menu2__dish--box3:hover .animation .anim {
   animation: slide 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.1s;
   transform-origin: right;
   animation-fill-mode: backwards;
 }
-.menu2__dish--box:hover .price {
-  animation: price 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.1s;
-}
-.menu2__dish--box:hover .grouptxt .dishname {
+.menu2__dish--box:hover .grouptxt .dishname, .menu2__dish--box2:hover .grouptxt .dishname, .menu2__dish--box3:hover .grouptxt .dishname {
   animation: text 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.1s;
 }
-.menu2__dish--box:hover .grouptxt .accompaniment {
+.menu2__dish--box:hover .grouptxt .accompaniment, .menu2__dish--box2:hover .grouptxt .accompaniment, .menu2__dish--box3:hover .grouptxt .accompaniment {
   animation: text 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.1s;
 }
-.menu2__dish--box .grouptxt {
+.menu2__dish--box .grouptxt, .menu2__dish--box2 .grouptxt, .menu2__dish--box3 .grouptxt {
   display: flex;
   flex-direction: column;
-  margin-left: 5px;
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 70vw;
 }
-.menu2__dish--box .grouptxt .dishname {
+@media screen and (max-width: 365px) {
+  .menu2__dish--box .grouptxt, .menu2__dish--box2 .grouptxt, .menu2__dish--box3 .grouptxt {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 992px) {
+  .menu2__dish--box .grouptxt, .menu2__dish--box2 .grouptxt, .menu2__dish--box3 .grouptxt {
+    margin-top: 2.5px;
+  }
+}
+.menu2__dish--box .grouptxt .dishname, .menu2__dish--box2 .grouptxt .dishname, .menu2__dish--box3 .grouptxt .dishname {
   margin-bottom: 0.5vw;
   margin-top: 0.5vw;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 4vw;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 300px;
-  height: 25px;
+  width: 70vw;
+  min-height: 25px;
 }
-.menu2__dish--box .grouptxt .accompaniment {
+@media screen and (max-width: 365px) {
+  .menu2__dish--box .grouptxt .dishname, .menu2__dish--box2 .grouptxt .dishname, .menu2__dish--box3 .grouptxt .dishname {
+    font-size: 5vw;
+    text-overflow: clip;
+    overflow: visible;
+    white-space: normal;
+  }
+}
+@media screen and (max-width: 240px) {
+  .menu2__dish--box .grouptxt .dishname, .menu2__dish--box2 .grouptxt .dishname, .menu2__dish--box3 .grouptxt .dishname {
+    font-size: 6vw;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 992px) {
+  .menu2__dish--box .grouptxt .dishname, .menu2__dish--box2 .grouptxt .dishname, .menu2__dish--box3 .grouptxt .dishname {
+    margin-bottom: 0vw;
+    margin-top: 1vw;
+    font-size: 20px;
+  }
+}
+.menu2__dish--box .grouptxt .accompaniment, .menu2__dish--box2 .grouptxt .accompaniment, .menu2__dish--box3 .grouptxt .accompaniment {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  width: 300px;
-  height: 20px;
+  width: 70vw;
+  min-height: 25px;
+  font-size: 3.5vw;
 }
-.menu2__dish--box .price {
+@media screen and (max-width: 365px) {
+  .menu2__dish--box .grouptxt .accompaniment, .menu2__dish--box2 .grouptxt .accompaniment, .menu2__dish--box3 .grouptxt .accompaniment {
+    font-size: 4.5vw;
+    text-overflow: clip;
+    overflow: visible;
+    white-space: normal;
+    margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 240px) {
+  .menu2__dish--box .grouptxt .accompaniment, .menu2__dish--box2 .grouptxt .accompaniment, .menu2__dish--box3 .grouptxt .accompaniment {
+    font-size: 5.5vw;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 992px) {
+  .menu2__dish--box .grouptxt .accompaniment, .menu2__dish--box2 .grouptxt .accompaniment, .menu2__dish--box3 .grouptxt .accompaniment {
+    font-size: 15px;
+  }
+}
+.menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price {
   font-weight: bold;
-  margin-top: 7vw;
-  margin-right: 0vw;
-  font-size: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10vw;
+  font-size: 4vw;
 }
-.menu2__dish--box .animation {
+@media screen and (max-width: 365px) {
+  .menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price {
+    font-size: 5vw;
+    margin-left: 5vw;
+  }
+}
+@media screen and (max-width: 240px) {
+  .menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price {
+    font-size: 6vw;
+    margin-left: 3vw;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 992px) {
+  .menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price {
+    margin-left: 8vw;
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 610px) and (max-width: 992px) {
+  .menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price {
+    margin-left: 11vw;
+  }
+}
+.menu2__dish--box .animation, .menu2__dish--box2 .animation, .menu2__dish--box3 .animation {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: -28px;
 }
-.menu2__dish--box .animation .anim {
+@media only screen and (max-width: 210px) {
+  .menu2__dish--box .animation, .menu2__dish--box2 .animation, .menu2__dish--box3 .animation {
+    margin-right: -35px;
+  }
+}
+.menu2__dish--box .animation .anim, .menu2__dish--box2 .animation .anim, .menu2__dish--box3 .animation .anim {
   background-color: #99E2D0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  width: 75px;
+  width: 70px;
   height: 100%;
   opacity: 0;
   justify-content: center;
   align-items: center;
 }
-.menu2__dish--box .animation i {
+.menu2__dish--box .animation i, .menu2__dish--box2 .animation i, .menu2__dish--box3 .animation i {
   font-size: 25px;
   color: white;
 }
@@ -511,6 +620,15 @@ header i {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
+}
+@media only screen and (min-width: 500px) and (max-width: 992px) {
+  .menu2 .button {
+    width: 250px;
+  }
+}
+.menu2 .button:hover {
+  background: linear-gradient(#fe89de, #9f6ae0);
+  box-shadow: 0px 5px 10px #888888;
 }
 .menu2 .button__txt {
   font-size: 20px;
@@ -543,7 +661,12 @@ footer {
 .footer__logo {
   font-family: "shrikhand", "cursive";
   font-size: 20px;
-  margin-top: 5vw;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 500px) and (max-width: 992px) {
+  .footer__logo {
+    font-size: 35px;
+  }
 }
 .footer ul {
   list-style-type: none;
@@ -553,6 +676,11 @@ footer {
 .footer ul li {
   margin-top: 1.5vw;
   font-size: 20px;
+}
+@media only screen and (max-width: 250px) {
+  .footer ul li {
+    margin-top: 3vw;
+  }
 }
 .footer ul i {
   margin-left: 0;
@@ -592,9 +720,25 @@ footer {
     }
   }
   100% {
-    width: 40vw;
+    width: 50vw;
     @media only screen and (min-width: 500px) and (max-width: 992px) {
       width: 250px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+@media only screen and (min-width: 150px) and (max-width: 270px) {
+  @keyframes text {
+    0% {
+      width: 70vw;
+    }
+    100% {
+      width: 25vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
   }
 }
