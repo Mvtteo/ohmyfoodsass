@@ -1,10 +1,14 @@
 
-//header
 
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./layout/layouts";
-@import "./Composants/compononents";
+@import "./layout/layouts"; 
+@import "./Components/components";
+@import "./Utils/keyframes";
+@import "./Pages/contact";
+
+//liste des imports nécessaires pour le projet
+
 
 // font 
 body{
@@ -17,65 +21,37 @@ section{
     animation: nothing 2.5s;
 }
 
-footer{
-    animation: nothing 2.5s;
-}
+//Animation qui desactive l'affichage de l'entiereté du site au démarrage afin de charger le loader
 
-@keyframes nothing{
-    0%{
-        opacity: 0%;
-    }
-    99%{
-        opacity: 0%;
-    }
-    100%{
-        opacity: 100%;
-    }
-}
 
-.lds-dual-ring {
-    width: 80px;
-    height: 80px;
-    @include center;
-    animation: hide 0s ease-in 2.5s;
-    animation-fill-mode: forwards;
-  }
-  .lds-dual-ring:after {
-    content: " ";
-    display: block;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: 6px solid $primary;
-    border-color: $primary transparent $primary transparent;
-    animation: lds-dual-ring 1.2s linear infinite;
-  }
-
-  @keyframes lds-dual-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes hide{
-      to{
-          visibility: hidden;
-          height: 0;
-          width: 0;
-      }
-  }
-
+ //header
 header{
     width: $fullwidth;
     font-family: 'Shrikhand', cursive;
 }
 
+@media only screen and (min-width: 993px){
+    #boxheader{
+        height: 5vw;
+        h1{
 
+            font-size: 3vw;
+        }
+    }
+}
 
-//section
+a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    @media only screen and (min-width: 993px){
+        pointer-events: none;
+        width: 23%;
+    }
+}
+
+//Paramètrage des ancres et desactivation de ces dernières sur la version web
+
 ///ville
 
 #city{
@@ -85,14 +61,26 @@ header{
     align-items: center;
     height: 15vw;
     margin-top: 0vw;
+    @media only screen and (min-width: 993px){
+        height: 2.5vw;
+    }
     i{
         font-size: $regularsize;
+        @media only screen and (min-width: 993px){
+            font-size: 1vw;
+        }
     }
     h2{
         margin-left: 3vw;
         font-size: $regularsize;
+        @media only screen and (min-width: 993px){
+            margin-left: 1vw;
+            font-size: 1vw;
+        }
     }
 }
+
+//Partie haute du site avec la ville choisie
 
 ///Découverte
 
@@ -100,6 +88,9 @@ header{
 .discover{
     background-color: $background;
     height: 80vw;
+    @media only screen and (min-width: 993px){
+        height: 15vw;
+    }
     &__content{
         align-items: center;
         @include column;
@@ -109,6 +100,9 @@ header{
         width: 60%;
         text-align: center;
         margin-bottom: 0;
+        @media only screen and (min-width: 993px){
+            font-size: 2vw;
+        }
         }
         h4{
             width: 90%;
@@ -116,24 +110,38 @@ header{
             font-weight: 100;
             text-align: center;
             margin-top: 3vw;
+            @media only screen and (min-width: 993px){
+            font-size: 1.7vw;
+            margin-top: 1vw;
+            margin-bottom: 0vw;
+            }
         }
         .button{
             margin-top: 2.5vw;
             background: linear-gradient($secondary, $primary);
             padding: 5.4vw;
             border-radius: 500px;
-            box-shadow: 0px 5px 10px #aaaaaa;
+            box-shadow: 0px 5px 10px $shadow;
+            @media only screen and (min-width: 993px){
+                margin-top: 1vw;
+                padding: 1vw;
+            }
             &:hover{
-                background: linear-gradient(#fe89de, #9f6ae0);
-                box-shadow: 0px 5px 10px #888888;
+                background: linear-gradient($secondarylight, $primarylight);
+                box-shadow: 0px 5px 10px $darkshadow;
             }
             &__txt{
                 font-size: $regularsize;
                 color: white;
+                @media only screen and (min-width: 993px){
+                font-size: 1vw;
+                }
             }
         }
+    }
 }
-}
+
+//Brève présentation de l'entreprise avec des effets au survol ainsi que des dégradés
 
 ///Fonctionnement
 
@@ -143,15 +151,25 @@ header{
     margin-left: auto;
     margin-right: auto;
     height: 124vw;
+    @media only screen and (min-width: 993px){
+    height: 20vw;
+    }
     h5{
         font-size: $subtitle;
+        @media only screen and (min-width: 993px){
+            font-size: 2vw;
+        }
     }
     .pannel{
         height: 80vw;
         justify-content: space-between;
         @include column;
+        @media only screen and (min-width: 993px){
+            height: 20vw;
+            flex-direction: row;
+        }
         .choose{
-            box-shadow: 0px 5px 15px #dbdbdb;
+            box-shadow: 0px 5px 15px $shadow;
             border-radius: 25px;
             width: 94%;
             height: 22vw;
@@ -159,11 +177,26 @@ header{
             align-items: center;
             align-content: center;
             margin-left: 3vw;
+            &:hover{
+                background-color: #f5edff;
+                box-shadow: 0px 5px 15px $darkshadow;
+            }
+            &:hover i{
+                color: $primary;
+            }
+            @media only screen and (min-width: 993px){
+                width: 30%;
+                height: 5vw;
+                margin-left: 1vw;
+            }
             &__content{
                 width: 80%;
                 display: flex;
                 align-items: center;
                 align-content: center;
+                @media only screen and (min-width: 993px){
+                    width: 100%;
+                }
             }
             &__number{
                 background-color: $primary;
@@ -174,14 +207,26 @@ header{
                 align-items: center;
                 justify-content: center;
                 margin-left: -3vw;
+                @media only screen and (min-width: 993px){
+                    height: 2vw;
+                    width: 2vw;
+                    margin-left: -1vw;
+                }
                 &--value{
                     color: white;
                     font-size: 3.6vw;
+                    @media only screen and (min-width: 993px){
+                        font-size: 1vw;
+                    }
                 }
             }
             &__instruction{
                 font-size: 4vw;
                 margin-left: 5vw;
+                @media only screen and (min-width: 993px){
+                    font-size: 1.5vw;
+                    margin-left: 2vw;
+                }
             }
         }
         .build{
@@ -195,6 +240,9 @@ header{
                 &--value{
                     color: $white;
                     font-size: 3.6vw;
+                    @media only screen and (min-width: 993px){
+                        font-size: 1.2vw;
+                    }
                 }
                 }
             &__instruction{
@@ -211,6 +259,9 @@ header{
                 &--value{
                     color: $white;
                     font-size: 3.6vw;
+                    @media only screen and (min-width: 993px){
+                        font-size: 1.2vw;
+                    }
                 }
             }
             &__instruction{
@@ -222,8 +273,14 @@ header{
         font-size: 5vw;
         color: grey;
         margin-left: 5vw;
+        @media only screen and (min-width: 993px){
+            font-size: 2vw;
+            margin-left: 2vw;
+        }
     }
 }
+
+// Partie explicative du site qui permet de comprendre le fonctionnement de l'application
 
 ///Restaurants
 
@@ -231,6 +288,9 @@ header{
         height: 310vw;
         background-color: $background;
         @include column;
+        @media only screen and (min-width: 993px){
+            height: 90vw;
+        }
     h5{
         font-size: $subtitle;
         width: 90%;
@@ -239,6 +299,10 @@ header{
         padding-top: 13vw;
         margin-bottom: 0;
         margin-top: 0;
+        @media only screen and (min-width: 993px){
+            font-size: 2vw;
+            padding-top: 3vw;
+        }
     }
     .restaurants{
         height: 270vw;
@@ -246,16 +310,30 @@ header{
         background-color: $background;
         @include column;
         margin-top: 5vw;
+        @media only screen and (min-width: 993px){
+            height: 14vw;
+            margin-top: 3vw;
+            width:  90%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: row;
+        }
     
-    .box{
+    .box, .box2, .box3{
         @include column;
         height: 64vw;
-        width: $fullwidth;
         border-radius: 20px;
-        box-shadow: 0px 0px 12px lightgrey;
+        box-shadow: 0px 0px 10px $shadow;
         width: 90%;
         margin-left: auto;
         margin-right: auto;
+        @media only screen and (min-width: 993px){
+            height: 14vw;
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
         &__img--palette{
             background-image: url('images/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
             height: 44vw;
@@ -264,11 +342,41 @@ header{
             background-position: bottom;
             border-top-right-radius: 20px;
             border-top-left-radius: 20px;
+            display: flex;
+            .new{
+                padding-left: 2.8vw;
+                padding-right: 2.8vw;
+                height: 4.8vw;
+                padding-top: 0.8vw;
+                margin-left: 65vw;
+                margin-top: 5vw;
+                border-radius: 2px;
+                box-shadow: 0px 0px 10px $shadow;
+                color: darken($color: $tertiary, $amount: 35);
+                background-color: $tertiary;
+                font-size: 3vw;
+                font-weight: 900;
+                @media only screen and (min-width: 993px){
+                    height: 1.2vw;
+                    padding-left: 0.8vw;
+                    padding-right: 0.8vw;
+                    padding-top: 0.2vw;
+                    margin-left: 14vw;
+                    margin-top: 1vw;
+                    font-size: 0.8vw;
+                }
+            }
+            @media only screen and (min-width: 993px){
+                height: 10vw;
+            }
         }
         &__img--note{
             @extend .box__img--palette;
             background-image: url('images/stil-u2Lp8tXIcjw-unsplash.jpg');
             background-position-y: 69vw;
+            @media only screen and (min-width: 993px){
+                background-position: center;
+            }
         }
         &__img--française{
             @extend .box__img--palette;
@@ -285,17 +393,32 @@ header{
             margin-right: auto;
             justify-content: space-between;
             align-items: center;
+            @media only screen and (min-width: 993px){
+                height: 2.5vw;
+                margin-top: 0.5vw;
+            }
         }
         &__txt{
             @include column;
             margin-top: 4.5vw;
+            @media only screen and (min-width: 993px){
+                margin-top: 0vw;
+                height: 100%;
+            }
             &--name{
                 font-size: 4.5vw;
                 font-weight: 900;
+                @media only screen and (min-width: 993px){
+                    font-size: 1.2vw;
+                }
             }
             &--place{
                 font-size: 4vw;
                 margin-top: 1vw;
+                @media only screen and (min-width: 993px){
+                    font-size: 0.8vw;
+                    margin-top: 0.4vw;
+                }
             }
         }
     }
@@ -305,287 +428,15 @@ header{
 .buyfood{
     display: none;
 }
-///footer
-
-footer{
-    width: $fullwidth;
-    background-color: #353535;
-}
-
-
 
 .menuglobal
 {
     display: none;
 }
 
-.footer{
-    height: 45vw;
-}
 
+//menu computer
 @media only screen and (min-width: 993px){
-// font 
-body{
-    font-family: 'Roboto', 'cursive';
-    margin: 0;
-    width: $fullwidth;
-    }
-    
-header{
-    width: $fullwidth;
-    font-family: 'Shrikhand', cursive;
-}
-
-#boxheader{
-    width: $fullwidth;
-    height: 5vw;
-	box-shadow: 0px 1px 5px #bbbbbb;
-    margin-top: 0;
-    display: flex;
-    position: relative;
-    h1{
-        display: inline-block;
-        margin-left: auto;
-        margin-right: auto;
-        align-self: center;
-        font-size: 3vw;
-    }
-}
-
-//section
-///ville
-
-#city{
-    display: flex;
-    background-color: #e7e7e7;
-    justify-content: center;
-    align-items: center;
-    height: 2.5vw;
-    margin-top: 0vw;
-    i{
-        font-size: 1vw;
-    }
-    h2{
-        margin-left: 1vw;
-        font-size: 1vw;
-    }
-}
-
-///Découverte
-
-
-.discover{
-    background-color: $background;
-    height: 15vw;
-    &__content{
-        align-items: center;
-        @include column;
-        h3{
-        font-size: 2vw;
-        font-weight: 900;
-        width: 60%;
-        text-align: center;
-        margin-bottom: 0;
-        }
-        h4{
-            width: 90%;
-            font-size: 1.7vw;
-            font-weight: 100;
-            text-align: center;
-            margin-top: 1vw;
-            margin-bottom: 0vw;
-        }
-        .button{
-            margin-top: 1vw;
-            background: linear-gradient($secondary, $primary);
-            padding: 1vw;
-            border-radius: 500px;
-            box-shadow: 0px 5px 10px #aaaaaa;
-            &__txt{
-                font-size: 1vw;
-                color: white;
-            }
-        }
-}
-}
-
-///Fonctionnement
-
-.howtouse{
-    @include column;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 20vw;
-    h5{
-        font-size: 2vw;
-    }
-    .pannel{
-        height: 20vw;
-        justify-content: space-between;
-        display: flex;
-        flex-direction: row;
-        .choose{
-            box-shadow: 0px 5px 15px #dbdbdb;
-            border-radius: 25px;
-            width: 30%;
-            height: 5vw;
-            display: flex;
-            align-items: center;
-            align-content: center;
-            margin-left: 1vw;
-            &__content{
-                width: 100%;
-                display: flex;
-                align-items: center;
-                align-content: center;
-            }
-            &__number{
-                background-color: $primary;
-                height: 2vw;
-                width: 2vw;
-                border-radius: 500px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-left: -1vw;
-                &--value{
-                    color: white;
-                    font-size: 1.2vw;
-                }
-            }
-            &__instruction{
-                font-size: 1.5vw;
-                margin-left: 2vw;
-            }
-        }
-        .build{
-            @extend .choose;
-            
-            &__content{
-                @extend .choose__content;
-            }
-            &__number{
-                @extend .choose__number;
-                &--value{
-                    color: $white;
-                    font-size: 1.2vw;
-                }
-                }
-            &__instruction{
-                @extend .choose__instruction;
-            }
-        }
-        .taste{
-            @extend .choose;
-            &__content{
-                @extend .choose__content;
-            }
-            &__number{
-                @extend .choose__number;
-                &--value{
-                    color: $white;
-                    font-size: 1.2vw;
-                }
-            }
-            &__instruction{
-                @extend .choose__instruction;
-            }
-        }
-    }
-    i{
-        font-size: 2vw;
-        color: grey;
-        margin-left: 2vw;
-    }
-}
-
-///Restaurants
-
-.grey{
-        height: 90vw;
-        background-color: $background;
-    h5{
-        font-size: 2vw;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 3vw;
-        margin-bottom: 0;
-        margin-top: 0;
-    }
-    .restaurants{
-        height: 14vw;
-        justify-content: space-between;
-        background-color: $background;
-        display: flex;
-        flex-direction: row;
-        margin-top: 3vw;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    
-    .box{
-        @include column;
-        height: 14vw;
-        width: 23%;
-        border-radius: 20px;
-        box-shadow: 0px 0px 12px lightgrey;
-        margin-left: 0;
-        margin-right: 0;
-        &__img--palette{
-            background-image: url('images/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
-            height: 10vw;
-            width: $fullwidth;
-            background-size: cover;
-            background-position: bottom;
-            border-top-right-radius: 20px;
-            border-top-left-radius: 20px;
-        }
-        &__img--note{
-            @extend .box__img--palette;
-            background-image: url('images/stil-u2Lp8tXIcjw-unsplash.jpg');
-            background-position: center;
-
-        }
-        &__img--française{
-            @extend .box__img--palette;
-            background-image: url('images/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
-        }
-        &__img--delice{
-            @extend .box__img--palette;
-            background-image: url('images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
-        }
-        &__group{
-            display: flex;
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-            justify-content: space-between;
-            align-items: center;
-            height: 2.5vw;
-            margin-top: 0.5vw;
-        }
-        &__txt{
-            @include column;
-            height: 100%;
-            margin-top: 0vw;
-            &--name{
-                font-size: 1.2vw;
-                font-weight: 900;
-            }
-            &--place{
-                font-size: 0.8vw;
-                margin-top: 0.4vw;
-            }
-        }
-        
-    }
-    }
-}
-
-///menus
-
     .menuglobal{
         width: 90%;
         @include center;
@@ -597,6 +448,7 @@ header{
                 width: 20.5vw;
                 &--title{
                     @include column;
+                    margin-bottom: 20px;
                     .line{
                         border: 1px solid $tertiary;
                         width: 40px;
@@ -606,7 +458,7 @@ header{
                         font-size: 1vw;
                     }
                 }
-                &--box{
+                &--box, &--box2, &--box3, &--box4{
                     display: flex;
                     justify-content: space-between;
                     width: 100%;
@@ -615,19 +467,20 @@ header{
                     border-radius: 15px;
                     padding: 0vw;
                     height: 3.5vw;
-                    box-shadow: 0px 0px 12px lightgrey;
+                    box-shadow: 0px 0px 12px $shadow;
                     overflow: hidden;
+                    opacity: 0;
                     &:hover i{
                         animation: translate 2s cubic-bezier(.26,.96,.42,1) 0.1s;
                         animation-fill-mode: backwards;
+                        @media only screen and (max-width: 1315px){
+                            animation: translateX 2s cubic-bezier(.26,.96,.42,1) 0.1s;
+                        }
                     }
                     &:hover .animation .anim{
                         animation: slide 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
                         transform-origin: right;
                         animation-fill-mode: backwards;
-                    }
-                    &:hover .price{
-                        animation: price 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
                     }
                     &:hover .grouptxt .dishname{
                         animation: text 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
@@ -650,251 +503,123 @@ header{
                             text-overflow: ellipsis;
                             white-space: nowrap;
                             overflow: hidden;
-                            width: 300px;
-                            height: 25px;
+                            width: 15.625vw;
+                            height: 30px;
                         }
                         .accompaniment{
                             font-size: 0.8vw;
                             text-overflow: ellipsis;
                             white-space: nowrap;
                             overflow: hidden;
-                            width: 300px;
-                            height: 20px;
+                            width: 15.625vw;
+                            height: 25px;
                             }
                         }
                         .price{
                             font-weight: bold;
-                            margin-top: 1.5vw;
-                            margin-right: -6vw;
-                            font-size: 0.7vw;
+                            margin-top: 10%;
+                            margin-left: 2.5vw;
+                            font-size: 0.8vw;
                             }
                             .animation{
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
-                                margin-right: -28px;
+                                margin-right: 10vw;
+                                @media only screen and (max-width: 1315px){
+                                    margin-left: 2vw;
+                                }
                                 .anim{    
-                                    background-color: #99E2D0;
+                                    background-color: $tertiary;
                                     border-top-right-radius: 15px;
                                     border-bottom-right-radius: 15px;
                                     width: 75px;
-                                    height: 100%;
+                                    height: 101%;
                                     opacity: 0;
                                     justify-content: center;
                                     align-items: center;
-                        
                                 }
                                 i{
                                     font-size: 25px;
                                     color: white;
+                                    @media only screen and (max-width: 1315px){
+                                        font-size: 20px;
+                                    }
                                 }
                             }
                 }
             }
-
-    }
-}
-
-@keyframes price{
-    0%{
-        margin-right: -6vw;
-    }
-    100%{
-        margin-right: -10px;
-    }
-}
-
-@keyframes text{
-    0%{
-        width: 300px;
-    }
-    100%{
-        width: 250px;
-    }
-}
-
-@keyframes slide{
-    0%{
-        transform: scaleX(0);
-        opacity: 1;
-    }
-    100%{
-        transform: scaleX(1);
-        opacity: 1;
-    }
-}
-
-@keyframes translate{
-    0%{
-        transform: translateX(0px) rotate(0deg);
-    }
-    100%{
-        transform: translateX(-50px) rotate(360deg);
-    }
-}
-
-.menu{
-    width: 23%;
-    &__dish2{
-        width: 20.5vw;
-        margin-top: 4.5vw;
-        &--title{
-            @include column;
-            .line{
-                border: 1px solid $tertiary;
-                width: 40px;
-            }
-            h6{
-                margin-bottom: 0px;
-                font-size: 1vw;
-            }
-        }
-        &--box{
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            margin-top: 1vw;
-            background-color: $white;
-            border-radius: 15px;
-            padding: 0vw;
-            height: 3.5vw;
-            box-shadow: 0px 0px 12px lightgrey;
-            overflow: hidden;
-            &:hover i{
-                animation: translate 2s cubic-bezier(.26,.96,.42,1) 0.1s;
-                animation-fill-mode: backwards;
-            }
-            &:hover .animation .anim{
-                animation: slide 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
-                transform-origin: right;
-                animation-fill-mode: backwards;
-            }
-            &:hover .price{
-                animation: price 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
-            }
-            &:hover .grouptxt .dishname{
-                animation: text 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
-            }
-            &:hover .grouptxt .accompaniment{
-                animation: text 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
-            }
-            &:hover{
-                cursor: pointer; 
-            }
-            .grouptxt{
-                @include column;
-                margin-left: 0.5vw;
-                margin-top: 0.5vw;
-                .dishname{
-                    margin-bottom: 0.2vw;
-                    margin-top: 0vw;
-                    font-weight: 900;
-                    font-size: 0.9vw;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    width: 300px;
-                    height: 25px;
+            &__dish2{
+                @extend .menu__dish;
+                margin-top: 4.5vw;
+                &--title{
+                    @extend .menu__dish--title;
                 }
-                .accompaniment{
-                    font-size: 0.8vw;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    width: 300px;
-                    height: 20px;
-                    }
+                &--box{
+                    @extend .menu__dish--box
                 }
-                .price{
-                    font-weight: bold;
-                    margin-top: 1.5vw;
-                    margin-right: -6vw;
-                    font-size: 0.7vw;
-                    }
-                    .animation{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        margin-right: -28px;
-                        .anim{    
-                            background-color: #99E2D0;
-                            border-top-right-radius: 15px;
-                            border-bottom-right-radius: 15px;
-                            width: 75px;
-                            height: 100%;
-                            opacity: 0;
-                            justify-content: center;
-                            align-items: center;
-                
-                        }
-                        i{
-                            font-size: 25px;
-                            color: white;
-                        }
-                    }
+            }
+
         }
     }
 
-}
-
-.buyfood{
-    display: block;
-    width: 12%;
-    background: linear-gradient($secondary, $primary);
-    padding: 1vw;
-    border-radius: 500px;
-    box-shadow: 0px 5px 10px #aaaaaa;
-    margin-top: 3vw;
-    @include center;
-    &__txt{
-        font-size: 2vw;
-        color: white;
-        margin-left: 4%;
-        margin-right: 4%;
+    .menu__dish--box2{
+        animation: pop 2s cubic-bezier(.26,.96,.42,1.01) 2.65s;
+        animation-fill-mode: forwards;
     }
-}
-        ///footer
+    
+    .menu__dish--box3{
+        animation: pop 2s cubic-bezier(.26,.96,.42,1.01) 2.9s;
+        animation-fill-mode: forwards;
+    }
 
-        footer{
-            width: $fullwidth;
-            background-color: #353535;
+    .menu__dish--box4{
+        animation: pop 2s cubic-bezier(.26,.96,.42,1.01) 3.15s;
+        animation-fill-mode: forwards;
+    }
+
+    .menu__dish--box{
+        animation: pop 2s cubic-bezier(.26,.96,.42,1.01) 2.4s;
+        animation-fill-mode: forwards;
+    }
+    
+
+    .buyfood{
+        display: block;
+        width: 12%;
+        background: linear-gradient($secondary, $primary);
+        padding: 1vw;
+        border-radius: 500px;
+        box-shadow: 0px 5px 10px $shadow;
+        margin-top: 3vw;
+        @include center;
+        &:hover{
+            background: linear-gradient($secondarylight, $primarylight);
+            box-shadow: 0px 5px 10px $darkshadow;
         }
-
-        .footer{
-            @extend .howtouse;
+        &__txt{
+            font-size: 1.5vw;
             color: white;
-            height: 8.5vw;
-            &__logo{
-                font-family: 'shrikhand', 'cursive';
-                font-size: 2vw;
-                margin-top: 1vw;
-                @include center;
-            }
-            ul{
-                list-style-type: none;
-                padding: 0;
-                height: 150px;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: baseline;
-                align-content: center;
-                width: 50%;
-                @include center;
-                li{
-                    margin-top: 0vw;
-                    font-size:0.9vw;
-                }
-                i{
-                    margin-left: 0;
-                    color: white;
-                    font-size: 2vw;
-                    margin-right: 1vw;
-                }
-                span i{
-                    margin-right: 1vw;
-                }
-            }
+            margin-left: 15%;
         }
-
+    }
 }
+
+//Partie la plus chargée du site avec tous les vignettes des restaurants renvoyant vers les autres
+//pages html ainsi que le menu uniquement disponible sur la version ordinateur et les animations
+
+@media only screen and (min-width: 993px){
+    .footer{
+        height: 8.5vw;
+    }
+}
+
+li a{
+    color: $white;
+}
+
+footer{
+    animation: nothing 2.5s;  
+}
+
+//Paramètres spécifiques à la page pour le footer
