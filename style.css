@@ -476,6 +476,9 @@ a {
     pointer-events: none;
     width: 23%;
   }
+  a .heart {
+    pointer-events: all;
+  }
 }
 
 #city {
