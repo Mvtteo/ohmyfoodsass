@@ -229,6 +229,22 @@
     }
   }
 }
+@media only screen and (min-width: 1750px) and (max-width: 1920px) {
+  @keyframes text {
+    0% {
+      width: 15.625vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    100% {
+      width: 11.3vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
 @media only screen and (min-width: 1600px) and (max-width: 1750px) {
   @keyframes text {
     0% {
