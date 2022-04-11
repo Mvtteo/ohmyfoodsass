@@ -1,9 +1,9 @@
-@import "./Components/components";
-@import "./Utils/keyframes";
-@import "./Utils/variables";
-@import "./Utils/mixins";
-@import "./Layout/layouts";
-@import "./Pages/contact";
+@import "./components/components";
+@import "./abstracts/keyframes";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./layout/layouts";
+@import "./pages/contact";
 
 // font 
 body{

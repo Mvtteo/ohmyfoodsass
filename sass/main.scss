@@ -1,11 +1,11 @@
 
 
-@import "./utils/variables";
-@import "./utils/mixins";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
 @import "./layout/layouts"; 
-@import "./Components/components";
-@import "./Utils/keyframes";
-@import "./Pages/contact";
+@import "./components/components";
+@import "./abstracts/keyframes";
+@import "./pages/contact";
 
 //liste des imports nécessaires pour le projet
 
