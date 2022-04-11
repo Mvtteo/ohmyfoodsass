@@ -73,12 +73,19 @@ a{
             font-size: 1vw;
         }
     }
-    h2{
+    input{
         margin-left: 3vw;
         font-size: $regularsize;
+        border: 0;
+        background-color: #e7e7e7;
+        font-weight: 900;
+        color: black;
+        font-family: roboto;
+        width: 36vw;
         @media only screen and (min-width: 993px){
             margin-left: 1vw;
             font-size: 1vw;
+            width: 6.777893639207508vw;
         }
     }
 }

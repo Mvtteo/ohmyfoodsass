@@ -90,15 +90,120 @@
 @keyframes text {
   0% {
     width: 15.625vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
   100% {
-    width: 11.5vw;
+    width: 12.5vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 2400px) and (max-width: 2560px) {
+  @keyframes text {
+    0% {
+      width: 15.625vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    100% {
+      width: 12.5vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+@media only screen and (min-width: 2250px) and (max-width: 2400px) {
+  @keyframes text {
+    0% {
+      width: 15.625vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    100% {
+      width: 12vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+@media only screen and (min-width: 2000px) and (max-width: 2250px) {
+  @keyframes text {
+    0% {
+      width: 15.625vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    100% {
+      width: 11.5vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+@media only screen and (min-width: 2250px) and (max-width: 2400px) {
+  @keyframes text {
+    0% {
+      width: 15.625vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    100% {
+      width: 12vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+@media only screen and (min-width: 1920px) and (max-width: 2250px) {
+  @keyframes text {
+    0% {
+      width: 15.625vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    100% {
+      width: 11.5vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+@media only screen and (min-width: 270px) and (max-width: 500px) {
+  @keyframes text {
+    0% {
+      width: 50vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    100% {
+      width: 45vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 992px) {
   @keyframes text {
     0% {
       width: 350px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
     100% {
       width: 250px;
@@ -112,9 +217,12 @@
   @keyframes text {
     0% {
       width: 70vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
     100% {
-      width: 25vw;
+      width: 30vw;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
@@ -417,14 +525,21 @@ a {
     font-size: 1vw;
   }
 }
-#city h2 {
+#city input {
   margin-left: 3vw;
   font-size: 5vw;
+  border: 0;
+  background-color: #e7e7e7;
+  font-weight: 900;
+  color: black;
+  font-family: roboto;
+  width: 36vw;
 }
 @media only screen and (min-width: 993px) {
-  #city h2 {
+  #city input {
     margin-left: 1vw;
     font-size: 1vw;
+    width: 6.7778936392vw;
   }
 }
 
