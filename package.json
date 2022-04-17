@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./sass/style.css"
+    "sass": "sass --watch ./sass/main.scss:./sass/style.css",
+    "prefix": "postcss ./sass/style.css --use autoprefixer -d ./sass/"
   },
   "author": "",
+  "browserslist": "last 4 versions",
   "license": "ISC",
   "repository": {
     "type": "git",
