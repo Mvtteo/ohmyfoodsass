@@ -25,9 +25,6 @@ header{
         @media only screen and (min-width: 500px) and (max-width: 992px){
             font-size: 35px;
         }
-        @media only screen and (min-width: 992px){
-            font-size: 35px;
-        }
     }
     a{
         margin-left: $regularsize;
@@ -36,9 +33,6 @@ header{
         text-decoration: none;
         color: black;
         @media only screen and (min-width: 500px) and (max-width: 992px){
-            font-size: 30px;
-        }
-        @media only screen and (min-width: 992px){
             font-size: 30px;
         }
     }
@@ -52,12 +46,8 @@ header{
     background-image: url(images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
     height: 300px;
     background-size: cover;
-    background-position: center;
     @media only screen and (min-width: 500px) and (max-width: 992px){
         height: 60vw;
-    }
-    @media only screen and (min-width: 992px){
-        height: 30vw;
     }
 }
 
@@ -68,9 +58,6 @@ header{
     background-position: center;
     @media only screen and (min-width: 500px) and (max-width: 992px){
         height: 60vw;
-    }
-    @media only screen and (min-width: 992px){
-        height: 30vw;
     }
 }
 
@@ -88,45 +75,9 @@ header{
 
 //menu
 
-.menu__dish--box{
-    animation: pop 2s cubic-bezier(.26,.96,.42,1.01) 0.2s;
-    animation-fill-mode: forwards;
-}
-
-.menu__dish--box2{
-    animation: pop 2s cubic-bezier(.26,.96,.42,1.01) 0.4s;
-    animation-fill-mode: forwards;
-}
-
-.menu__dish--box3{
-    animation: pop 2s cubic-bezier(.26,.96,.42,1.01) 0.6s;
-    animation-fill-mode: forwards;
-}
-
-
-.menu2__dish--box{
-    animation: pop 2s cubic-bezier(.26,.96,.42,1.01) 0.2s;
-    animation-fill-mode: forwards;  
-}
-
-.menu2__dish--box2{
-    animation: pop 2s cubic-bezier(.26,.96,.42,1.01) 0.4s;
-    animation-fill-mode: forwards;  
-}
-.menu2__dish--box3{
-    animation: pop 2s cubic-bezier(.26,.96,.42,1.01) 0.6s;
-    animation-fill-mode: forwards;  
-}
-.menu2__dish--box4{
-    animation: pop 2s cubic-bezier(.26,.96,.42,1.01) 0.8s;
-    animation-fill-mode: forwards;
-}
-
-//réglages des animations mis au dessus pour éviter un conflit d'ordre
-
 .menu{
     @include center;
-    height: auto;
+    height: 1220px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     background-color: $background;
@@ -144,18 +95,11 @@ header{
         h2{
             font-family: 'Shrikhand','cursive';
             margin-bottom: 50px;
-            @media only screen and (min-width: 992px){
-                font-size: 45px;
-            }
         }
         .heart{
             margin-bottom: 30px;
             height: 30px;
             width: 30px;
-            @media only screen and (min-width: 992px){
-                height: 50px;
-                width: 50px;
-            }
             &:active .fullheart{
                 animation: fill 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
                 transform-origin: bottom;
@@ -163,32 +107,16 @@ header{
             }
             .empty{
                 font-size: 30px;
-                @media only screen and (min-width: 992px){
-                    font-size: 50px;
-                }
-                
             }
             .fullheart{
             font-size: 30px;
-            @media only screen and (min-width: 992px){
-                font-size: 50px;
-            }
             }
         }
     }
     &__dish{
-        @media only screen and (min-width: 992px){
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            width: 97%;
-        }
         &--title{
             @include column;
             @include marginleft;
-            @media only screen and (min-width: 992px){
-                font-size: 25px;
-            }
             .line{
                 border: 1px solid $tertiary;
                 width: 40px;
@@ -196,11 +124,6 @@ header{
             h3{
                 margin-bottom: 5px;
                 font-weight: 100;
-                @media only screen and (min-width: 992px){
-                    font-size: 20px;
-                    width: 120px;
-                }
-                
             }
         }
         &--box, &--box2, &--box3{
@@ -215,16 +138,11 @@ header{
             box-shadow: 0px 0px 12px $shadow;
             overflow: hidden;
             opacity: 0;
+            animation: pop 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
+            animation-fill-mode: forwards;
             @media only screen and (min-width: 500px) and (max-width: 992px){
                 height: 60px;
                 min-height: 0px;  
-            }
-            @media only screen and (min-width: 992px){
-                margin-top: 50px;
-                width: 27%;
-                min-height: 5vw;
-                margin-left: 0;
-                margin-right: 0;
             }
             &:hover i{
                 animation: translate 2s cubic-bezier(.26,.96,.42,1) 0.1s;
@@ -252,9 +170,6 @@ header{
                 @media only screen and (min-width: 500px) and (max-width: 992px){
                     margin-top: 2.5px;
                 }
-                @media screen and (min-width: 992px){
-                    width: 23vw;
-                }
                 .dishname{
                     margin-bottom: 0.5vw;
                     margin-top: 0.5vw;
@@ -279,10 +194,6 @@ header{
                         margin-top: 1vw;
                         font-size: 20px;
                     }
-                    @media only screen and (min-width: 992px){
-                        font-size: 1.25vw;
-                        width: 23vw;
-                    }
                 }
                 .accompaniment{
                     text-overflow: ellipsis;
@@ -304,44 +215,28 @@ header{
                     @media only screen and (min-width: 500px) and (max-width: 992px){
                         font-size: 15px;
                     }
-                    @media only screen and (min-width: 992px){
-                        font-size: 1.1979166666666667vw;
-                        width: 23vw;
-                    }
                 }
             }
             .price{
-                font-weight: bold;
-                margin-top: 32px;
+            font-weight: bold;
+            margin-top: 32px;
+            margin-left: 10vw;
+            font-size: 4vw;
+            @media screen and (max-width: 365px){
+                font-size: 5vw;
+                margin-left: 5vw;
+            }
+            @media screen and (max-width: 240px){
+                font-size: 6vw;
+                margin-left: 3vw;
+            }
+            @media only screen and (min-width: 500px) and (max-width: 992px){
                 margin-left: 8vw;
                 font-size: 15px;
-                @media screen and (max-width: 365px){
-                    font-size: 5vw;
-                    margin-left: 5vw;
-                }
-                @media screen and (max-width: 240px){
-                    font-size: 6vw;
-                    margin-left: 3vw;
-                }
-                @media only screen and (min-width: 500px) and (max-width: 992px){
-                    margin-left: 8vw;
-                    font-size: 15px;
-                }
-                @media only screen and (min-width: 610px) and (max-width: 992px){
-                    margin-left: 11vw;
-                }
-                @media only screen and (min-width: 992px){
-                    font-size: 0.9375vw;
-                    margin-top: 3.0208333333333335vw;
-                    margin-left: 0vw;
-                }
-                @media only screen and (min-width: 992px) and (max-width: 1715px){
-                    margin-top: 40px;
-                }
-                @media only screen and (min-width: 992px) and (max-width: 1150px){
-                    margin-left: -5px;
-                    font-size: 1vw;
-                }
+            }
+            @media only screen and (min-width: 610px) and (max-width: 992px){
+                margin-left: 11vw;
+            }
             }
             .animation{
                 display: flex;
@@ -380,10 +275,6 @@ header{
         @media only screen and (min-width: 500px) and (max-width: 992px){
             width: 250px;
         }
-        @media only screen and (min-width: 992px){
-            width: 250px;
-            margin-top: 50px;
-        }
         &:hover{
             background: linear-gradient($secondarylight, $primarylight);
             box-shadow: 0px 5px 10px $darkshadow;
@@ -399,21 +290,24 @@ header{
 
 }
 
+.menu__dish--box2{
+    animation: pop 2s cubic-bezier(.26,.96,.42,1.01) 0.25s;
+    animation-fill-mode: forwards;
+}
 
+.menu__dish--box3{
+    animation: pop 2s cubic-bezier(.26,.96,.42,1.01) 0.4s;
+    animation-fill-mode: forwards;
+}
 
 //Plats et menus disponibles sur la carte avec animations en responsive
 
 
 .menu2{
     @extend .menu;
-    height: auto;
+    height: 1220px;
     &__title{
         @extend .menu__title;
-        h2{
-            @media only screen and (min-width: 992px){
-                font-size: 45px;
-            }
-        }
         .heart{
             @extend .heart;
             }
@@ -425,78 +319,15 @@ header{
             }
     }
     &__dish{
-        @extend .menu__dish;
         &--title{
             @extend .menu__dish--title;
-            @media only screen and (min-width: 992px){
-                font-size: 25px;
-            }
             .line{
                 @extend .line;
             }
         }
-        &--box, &--box2, &--box3, &--box4{
+        &--box, &--box2, &--box3{
             @extend .menu__dish--box;
             }
-        &--box4{
-            @media only screen and (min-width: 1850px) and (max-width: 1920px){
-                margin-left: 13vw;
-            }
-            @media only screen and (min-width: 1800px) and (max-width: 1850px){
-                margin-left: 13.1vw;
-            }
-            @media only screen and (min-width: 1750px) and (max-width: 1800px){
-                margin-left: 13.2vw;
-            } 
-            @media only screen and (min-width: 1700px) and (max-width: 1750px){
-                margin-left: 13.3vw;
-            } 
-            @media only screen and (min-width: 1650px) and (max-width: 1700px){
-                margin-left: 13.4vw;
-            } 
-            @media only screen and (min-width: 1600px) and (max-width: 1650px){
-                margin-left: 13.5vw;
-            } 
-            @media only screen and (min-width: 1550px) and (max-width: 1600px){
-                margin-left: 13.6vw;
-            } 
-            @media only screen and (min-width: 1500px) and (max-width: 1550px){
-                margin-left: 13.7vw;
-            }
-            @media only screen and (min-width: 1450px) and (max-width: 1500px){
-                margin-left: 13.9vw;
-            }
-            @media only screen and (min-width: 1400px) and (max-width: 1450px){
-                margin-left: 14.2vw;
-            }
-            @media only screen and (min-width: 1350px) and (max-width: 1400px){
-                margin-left: 14.5vw;
-            } 
-            @media only screen and (min-width: 1300px) and (max-width: 1350px){
-                margin-left: 14.7vw;
-            } 
-            @media only screen and (min-width: 1250px) and (max-width: 1300px){
-                margin-left: 15vw;
-            } 
-            @media only screen and (min-width: 1200px) and (max-width: 1250px){
-                margin-left: 15.2vw;
-            } 
-            @media only screen and (min-width: 1150px) and (max-width: 1200px){
-                margin-left: 15.6vw;
-            } 
-            @media only screen and (min-width: 1080px) and (max-width: 1150px){
-                margin-left: 15.8vw;
-            }         
-            @media only screen and (min-width: 1050px) and (max-width: 1080px){
-                margin-left: 16.4vw;
-            }   
-            @media only screen and (min-width: 1000px) and (max-width: 1050px){
-                margin-left: 16.5vw;
-            }   
-            @media only screen and (min-width: 992px) and (max-width: 1020px){
-                margin-left: 16.6vw;
-            }   
-        }
             .grouptxt{
                 @extend .grouptxt;
                 }

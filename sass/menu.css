@@ -71,28 +71,60 @@
 
 @keyframes text {
   0% {
-    width: 50vw;
+    width: 15.625vw;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
   }
   100% {
-    width: 45vw;
+    width: 12.5vw;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
   }
 }
-@media only screen and (min-width: 500px) and (max-width: 992px) {
+@media only screen and (min-width: 1920px) and (max-width: 2560px) {
   @keyframes text {
     0% {
-      width: 350px;
+      width: 23vw;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
     }
     100% {
-      width: 250px;
+      width: 18vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+@media only screen and (min-width: 270px) and (max-width: 500px) {
+  @keyframes text {
+    0% {
+      width: 70vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    100% {
+      width: 45vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 992px) {
+  @keyframes text {
+    0% {
+      width: 70vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    100% {
+      width: 55vw;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
@@ -108,7 +140,23 @@
       overflow: hidden;
     }
     100% {
-      width: 25vw;
+      width: 30vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+@media only screen and (min-width: 1750px) and (max-width: 1920px) {
+  @keyframes text {
+    0% {
+      width: 23vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    100% {
+      width: 18vw;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
@@ -118,60 +166,48 @@
 @media only screen and (min-width: 1600px) and (max-width: 1750px) {
   @keyframes text {
     0% {
-      width: 15.625vw;
+      width: 23vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
     100% {
-      width: 11vw;
+      width: 18vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
   }
 }
-@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+@media only screen and (min-width: 1150px) and (max-width: 1600px) {
   @keyframes text {
     0% {
-      width: 15.625vw;
+      width: 23vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
     100% {
-      width: 10.5vw;
+      width: 16vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
   }
 }
-@media only screen and (min-width: 1250px) and (max-width: 1400px) {
+@media only screen and (min-width: 992px) and (max-width: 1150px) {
   @keyframes text {
     0% {
-      width: 15.625vw;
+      width: 23vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
     100% {
-      width: 10vw;
-    }
-  }
-}
-@media only screen and (min-width: 1100px) and (max-width: 1250px) {
-  @keyframes text {
-    0% {
-      width: 15.625vw;
-    }
-    100% {
-      width: 9.5vw;
-    }
-  }
-}
-@media only screen and (min-width: 1000px) and (max-width: 1100px) {
-  @keyframes text {
-    0% {
-      width: 15.625vw;
-    }
-    100% {
-      width: 9vw;
-    }
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1000px) {
-  @keyframes text {
-    0% {
-      width: 15.625vw;
-    }
-    100% {
-      width: 8.5vw;
+      width: 14vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
   }
 }
@@ -303,15 +339,20 @@ footer {
     height: 260px;
   }
 }
+@media only screen and (min-width: 992px) {
+  .footer {
+    height: 150px;
+  }
+}
 .footer__logo {
   font-family: "shrikhand", "cursive";
   margin-top: 20px;
   font-size: 25px;
 }
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 992px) {
   .footer__logo {
-    margin-top: 5px;
-    font-size: 2vw;
+    margin-top: 15px;
+    font-size: 45px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -321,9 +362,9 @@ footer {
   padding: 0;
   height: 100px;
 }
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 992px) {
   .footer ul {
-    height: 150px;
+    height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -331,7 +372,7 @@ footer {
     align-content: center;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 95%;
   }
 }
 .footer ul li {
@@ -345,7 +386,7 @@ footer {
 @media only screen and (min-width: 993px) {
   .footer ul li {
     margin-top: 0vw;
-    font-size: 0.9vw;
+    font-size: 25px;
   }
 }
 .footer ul i {
@@ -356,7 +397,7 @@ footer {
 }
 @media only screen and (min-width: 993px) {
   .footer ul i {
-    font-size: 1vw;
+    font-size: 20px;
     margin-right: 1vw;
   }
 }
@@ -390,6 +431,11 @@ header h1 {
     font-size: 35px;
   }
 }
+@media only screen and (min-width: 992px) {
+  header h1 {
+    font-size: 35px;
+  }
+}
 header a {
   margin-left: 5vw;
   font-size: 6vw;
@@ -402,15 +448,26 @@ header a {
     font-size: 30px;
   }
 }
+@media only screen and (min-width: 992px) {
+  header a {
+    font-size: 30px;
+  }
+}
 
 .background, .background3 {
   background-image: url(images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   height: 300px;
   background-size: cover;
+  background-position: center;
 }
 @media only screen and (min-width: 500px) and (max-width: 992px) {
   .background, .background3 {
     height: 60vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .background, .background3 {
+    height: 30vw;
   }
 }
 
@@ -425,6 +482,11 @@ header a {
     height: 60vw;
   }
 }
+@media only screen and (min-width: 992px) {
+  .background2, .background4 {
+    height: 30vw;
+  }
+}
 
 .background3 {
   background-image: url(images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
@@ -434,10 +496,45 @@ header a {
   background-image: url(images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
 
+.menu__dish--box, .menu2__dish--box, .menu2__dish--box2, .menu2__dish--box3, .menu2__dish--box4 {
+  animation: pop 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.menu__dish--box2 {
+  animation: pop 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.menu__dish--box3 {
+  animation: pop 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.menu2__dish--box {
+  animation: pop 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.menu2__dish--box2 {
+  animation: pop 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.menu2__dish--box3 {
+  animation: pop 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.menu2__dish--box4 {
+  animation: pop 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.8s;
+  animation-fill-mode: forwards;
+}
+
 .menu, .menu2 {
   margin-left: auto;
   margin-right: auto;
-  height: 1220px;
+  height: auto;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   background-color: #F6f6f6;
@@ -459,10 +556,21 @@ header a {
   font-family: "Shrikhand", "cursive";
   margin-bottom: 50px;
 }
+@media only screen and (min-width: 992px) {
+  .menu__title h2, .menu2__title h2 {
+    font-size: 45px;
+  }
+}
 .menu__title .heart, .menu2__title .heart {
   margin-bottom: 30px;
   height: 30px;
   width: 30px;
+}
+@media only screen and (min-width: 992px) {
+  .menu__title .heart, .menu2__title .heart {
+    height: 50px;
+    width: 50px;
+  }
 }
 .menu__title .heart:active .fullheart, .menu2__title .heart:active .fullheart {
   animation: fill 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.1s;
@@ -472,13 +580,36 @@ header a {
 .menu__title .heart .empty, .menu2__title .heart .empty {
   font-size: 30px;
 }
+@media only screen and (min-width: 992px) {
+  .menu__title .heart .empty, .menu2__title .heart .empty {
+    font-size: 50px;
+  }
+}
 .menu__title .heart .fullheart, .menu2__title .heart .fullheart {
   font-size: 30px;
+}
+@media only screen and (min-width: 992px) {
+  .menu__title .heart .fullheart, .menu2__title .heart .fullheart {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .menu__dish, .menu2__dish {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 97%;
+  }
 }
 .menu__dish--title, .menu2__dish--title {
   display: flex;
   flex-direction: column;
   margin-left: 4vw;
+}
+@media only screen and (min-width: 992px) {
+  .menu__dish--title, .menu2__dish--title {
+    font-size: 25px;
+  }
 }
 .menu__dish--title .line, .menu2__dish--title .line {
   border: 1px solid #99E2D0;
@@ -486,8 +617,15 @@ header a {
 }
 .menu__dish--title h3, .menu2__dish--title h3 {
   margin-bottom: 5px;
+  font-weight: 100;
 }
-.menu__dish--box, .menu2__dish--box, .menu2__dish--box2, .menu2__dish--box3, .menu__dish--box2, .menu__dish--box3 {
+@media only screen and (min-width: 992px) {
+  .menu__dish--title h3, .menu2__dish--title h3 {
+    font-size: 20px;
+    width: 120px;
+  }
+}
+.menu__dish--box, .menu2__dish--box, .menu2__dish--box2, .menu2__dish--box3, .menu2__dish--box4, .menu__dish--box2, .menu__dish--box3 {
   display: flex;
   justify-content: space-between;
   width: 90%;
@@ -500,31 +638,38 @@ header a {
   box-shadow: 0px 0px 12px lightgrey;
   overflow: hidden;
   opacity: 0;
-  animation: pop 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.1s;
-  animation-fill-mode: forwards;
 }
 @media only screen and (min-width: 500px) and (max-width: 992px) {
-  .menu__dish--box, .menu2__dish--box, .menu2__dish--box2, .menu2__dish--box3, .menu__dish--box2, .menu__dish--box3 {
+  .menu__dish--box, .menu2__dish--box, .menu2__dish--box2, .menu2__dish--box3, .menu2__dish--box4, .menu__dish--box2, .menu__dish--box3 {
     height: 60px;
     min-height: 0px;
   }
 }
-.menu__dish--box:hover i, .menu2__dish--box:hover i, .menu2__dish--box2:hover i, .menu2__dish--box3:hover i, .menu__dish--box2:hover i, .menu__dish--box3:hover i {
+@media only screen and (min-width: 992px) {
+  .menu__dish--box, .menu2__dish--box, .menu2__dish--box2, .menu2__dish--box3, .menu2__dish--box4, .menu__dish--box2, .menu__dish--box3 {
+    margin-top: 50px;
+    width: 27%;
+    min-height: 5vw;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.menu__dish--box:hover i, .menu2__dish--box:hover i, .menu2__dish--box2:hover i, .menu2__dish--box3:hover i, .menu2__dish--box4:hover i, .menu__dish--box2:hover i, .menu__dish--box3:hover i {
   animation: translate 2s cubic-bezier(0.26, 0.96, 0.42, 1) 0.1s;
   animation-fill-mode: backwards;
 }
-.menu__dish--box:hover .animation .anim, .menu2__dish--box:hover .animation .anim, .menu2__dish--box2:hover .animation .anim, .menu2__dish--box3:hover .animation .anim, .menu__dish--box2:hover .animation .anim, .menu__dish--box3:hover .animation .anim {
+.menu__dish--box:hover .animation .anim, .menu2__dish--box:hover .animation .anim, .menu2__dish--box2:hover .animation .anim, .menu2__dish--box3:hover .animation .anim, .menu2__dish--box4:hover .animation .anim, .menu__dish--box2:hover .animation .anim, .menu__dish--box3:hover .animation .anim {
   animation: slide 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.1s;
   transform-origin: right;
   animation-fill-mode: backwards;
 }
-.menu__dish--box:hover .grouptxt .dishname, .menu2__dish--box:hover .grouptxt .dishname, .menu2__dish--box2:hover .grouptxt .dishname, .menu2__dish--box3:hover .grouptxt .dishname, .menu__dish--box2:hover .grouptxt .dishname, .menu__dish--box3:hover .grouptxt .dishname {
+.menu__dish--box:hover .grouptxt .dishname, .menu2__dish--box:hover .grouptxt .dishname, .menu2__dish--box2:hover .grouptxt .dishname, .menu2__dish--box3:hover .grouptxt .dishname, .menu2__dish--box4:hover .grouptxt .dishname, .menu__dish--box2:hover .grouptxt .dishname, .menu__dish--box3:hover .grouptxt .dishname {
   animation: text 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.1s;
 }
-.menu__dish--box:hover .grouptxt .accompaniment, .menu2__dish--box:hover .grouptxt .accompaniment, .menu2__dish--box2:hover .grouptxt .accompaniment, .menu2__dish--box3:hover .grouptxt .accompaniment, .menu__dish--box2:hover .grouptxt .accompaniment, .menu__dish--box3:hover .grouptxt .accompaniment {
+.menu__dish--box:hover .grouptxt .accompaniment, .menu2__dish--box:hover .grouptxt .accompaniment, .menu2__dish--box2:hover .grouptxt .accompaniment, .menu2__dish--box3:hover .grouptxt .accompaniment, .menu2__dish--box4:hover .grouptxt .accompaniment, .menu__dish--box2:hover .grouptxt .accompaniment, .menu__dish--box3:hover .grouptxt .accompaniment {
   animation: text 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.1s;
 }
-.menu__dish--box .grouptxt, .menu2__dish--box .grouptxt, .menu2__dish--box2 .grouptxt, .menu2__dish--box3 .grouptxt, .menu__dish--box2 .grouptxt, .menu__dish--box3 .grouptxt {
+.menu__dish--box .grouptxt, .menu2__dish--box .grouptxt, .menu2__dish--box2 .grouptxt, .menu2__dish--box3 .grouptxt, .menu2__dish--box4 .grouptxt, .menu__dish--box2 .grouptxt, .menu__dish--box3 .grouptxt {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
@@ -532,16 +677,21 @@ header a {
   width: 70vw;
 }
 @media screen and (max-width: 365px) {
-  .menu__dish--box .grouptxt, .menu2__dish--box .grouptxt, .menu2__dish--box2 .grouptxt, .menu2__dish--box3 .grouptxt, .menu__dish--box2 .grouptxt, .menu__dish--box3 .grouptxt {
+  .menu__dish--box .grouptxt, .menu2__dish--box .grouptxt, .menu2__dish--box2 .grouptxt, .menu2__dish--box3 .grouptxt, .menu2__dish--box4 .grouptxt, .menu__dish--box2 .grouptxt, .menu__dish--box3 .grouptxt {
     flex-wrap: wrap;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 992px) {
-  .menu__dish--box .grouptxt, .menu2__dish--box .grouptxt, .menu2__dish--box2 .grouptxt, .menu2__dish--box3 .grouptxt, .menu__dish--box2 .grouptxt, .menu__dish--box3 .grouptxt {
+  .menu__dish--box .grouptxt, .menu2__dish--box .grouptxt, .menu2__dish--box2 .grouptxt, .menu2__dish--box3 .grouptxt, .menu2__dish--box4 .grouptxt, .menu__dish--box2 .grouptxt, .menu__dish--box3 .grouptxt {
     margin-top: 2.5px;
   }
 }
-.menu__dish--box .grouptxt .dishname, .menu2__dish--box .grouptxt .dishname, .menu2__dish--box2 .grouptxt .dishname, .menu2__dish--box3 .grouptxt .dishname, .menu__dish--box2 .grouptxt .dishname, .menu__dish--box3 .grouptxt .dishname {
+@media screen and (min-width: 992px) {
+  .menu__dish--box .grouptxt, .menu2__dish--box .grouptxt, .menu2__dish--box2 .grouptxt, .menu2__dish--box3 .grouptxt, .menu2__dish--box4 .grouptxt, .menu__dish--box2 .grouptxt, .menu__dish--box3 .grouptxt {
+    width: 23vw;
+  }
+}
+.menu__dish--box .grouptxt .dishname, .menu2__dish--box .grouptxt .dishname, .menu2__dish--box2 .grouptxt .dishname, .menu2__dish--box3 .grouptxt .dishname, .menu2__dish--box4 .grouptxt .dishname, .menu__dish--box2 .grouptxt .dishname, .menu__dish--box3 .grouptxt .dishname {
   margin-bottom: 0.5vw;
   margin-top: 0.5vw;
   font-weight: 900;
@@ -553,7 +703,7 @@ header a {
   min-height: 25px;
 }
 @media screen and (max-width: 365px) {
-  .menu__dish--box .grouptxt .dishname, .menu2__dish--box .grouptxt .dishname, .menu2__dish--box2 .grouptxt .dishname, .menu2__dish--box3 .grouptxt .dishname, .menu__dish--box2 .grouptxt .dishname, .menu__dish--box3 .grouptxt .dishname {
+  .menu__dish--box .grouptxt .dishname, .menu2__dish--box .grouptxt .dishname, .menu2__dish--box2 .grouptxt .dishname, .menu2__dish--box3 .grouptxt .dishname, .menu2__dish--box4 .grouptxt .dishname, .menu__dish--box2 .grouptxt .dishname, .menu__dish--box3 .grouptxt .dishname {
     font-size: 5vw;
     text-overflow: clip;
     overflow: visible;
@@ -561,18 +711,24 @@ header a {
   }
 }
 @media screen and (max-width: 240px) {
-  .menu__dish--box .grouptxt .dishname, .menu2__dish--box .grouptxt .dishname, .menu2__dish--box2 .grouptxt .dishname, .menu2__dish--box3 .grouptxt .dishname, .menu__dish--box2 .grouptxt .dishname, .menu__dish--box3 .grouptxt .dishname {
+  .menu__dish--box .grouptxt .dishname, .menu2__dish--box .grouptxt .dishname, .menu2__dish--box2 .grouptxt .dishname, .menu2__dish--box3 .grouptxt .dishname, .menu2__dish--box4 .grouptxt .dishname, .menu__dish--box2 .grouptxt .dishname, .menu__dish--box3 .grouptxt .dishname {
     font-size: 6vw;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 992px) {
-  .menu__dish--box .grouptxt .dishname, .menu2__dish--box .grouptxt .dishname, .menu2__dish--box2 .grouptxt .dishname, .menu2__dish--box3 .grouptxt .dishname, .menu__dish--box2 .grouptxt .dishname, .menu__dish--box3 .grouptxt .dishname {
+  .menu__dish--box .grouptxt .dishname, .menu2__dish--box .grouptxt .dishname, .menu2__dish--box2 .grouptxt .dishname, .menu2__dish--box3 .grouptxt .dishname, .menu2__dish--box4 .grouptxt .dishname, .menu__dish--box2 .grouptxt .dishname, .menu__dish--box3 .grouptxt .dishname {
     margin-bottom: 0vw;
     margin-top: 1vw;
     font-size: 20px;
   }
 }
-.menu__dish--box .grouptxt .accompaniment, .menu2__dish--box .grouptxt .accompaniment, .menu2__dish--box2 .grouptxt .accompaniment, .menu2__dish--box3 .grouptxt .accompaniment, .menu__dish--box2 .grouptxt .accompaniment, .menu__dish--box3 .grouptxt .accompaniment {
+@media only screen and (min-width: 992px) {
+  .menu__dish--box .grouptxt .dishname, .menu2__dish--box .grouptxt .dishname, .menu2__dish--box2 .grouptxt .dishname, .menu2__dish--box3 .grouptxt .dishname, .menu2__dish--box4 .grouptxt .dishname, .menu__dish--box2 .grouptxt .dishname, .menu__dish--box3 .grouptxt .dishname {
+    font-size: 1.25vw;
+    width: 23vw;
+  }
+}
+.menu__dish--box .grouptxt .accompaniment, .menu2__dish--box .grouptxt .accompaniment, .menu2__dish--box2 .grouptxt .accompaniment, .menu2__dish--box3 .grouptxt .accompaniment, .menu2__dish--box4 .grouptxt .accompaniment, .menu__dish--box2 .grouptxt .accompaniment, .menu__dish--box3 .grouptxt .accompaniment {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -581,7 +737,7 @@ header a {
   font-size: 3.5vw;
 }
 @media screen and (max-width: 365px) {
-  .menu__dish--box .grouptxt .accompaniment, .menu2__dish--box .grouptxt .accompaniment, .menu2__dish--box2 .grouptxt .accompaniment, .menu2__dish--box3 .grouptxt .accompaniment, .menu__dish--box2 .grouptxt .accompaniment, .menu__dish--box3 .grouptxt .accompaniment {
+  .menu__dish--box .grouptxt .accompaniment, .menu2__dish--box .grouptxt .accompaniment, .menu2__dish--box2 .grouptxt .accompaniment, .menu2__dish--box3 .grouptxt .accompaniment, .menu2__dish--box4 .grouptxt .accompaniment, .menu__dish--box2 .grouptxt .accompaniment, .menu__dish--box3 .grouptxt .accompaniment {
     font-size: 4.5vw;
     text-overflow: clip;
     overflow: visible;
@@ -590,56 +746,80 @@ header a {
   }
 }
 @media screen and (max-width: 240px) {
-  .menu__dish--box .grouptxt .accompaniment, .menu2__dish--box .grouptxt .accompaniment, .menu2__dish--box2 .grouptxt .accompaniment, .menu2__dish--box3 .grouptxt .accompaniment, .menu__dish--box2 .grouptxt .accompaniment, .menu__dish--box3 .grouptxt .accompaniment {
+  .menu__dish--box .grouptxt .accompaniment, .menu2__dish--box .grouptxt .accompaniment, .menu2__dish--box2 .grouptxt .accompaniment, .menu2__dish--box3 .grouptxt .accompaniment, .menu2__dish--box4 .grouptxt .accompaniment, .menu__dish--box2 .grouptxt .accompaniment, .menu__dish--box3 .grouptxt .accompaniment {
     font-size: 5.5vw;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 992px) {
-  .menu__dish--box .grouptxt .accompaniment, .menu2__dish--box .grouptxt .accompaniment, .menu2__dish--box2 .grouptxt .accompaniment, .menu2__dish--box3 .grouptxt .accompaniment, .menu__dish--box2 .grouptxt .accompaniment, .menu__dish--box3 .grouptxt .accompaniment {
+  .menu__dish--box .grouptxt .accompaniment, .menu2__dish--box .grouptxt .accompaniment, .menu2__dish--box2 .grouptxt .accompaniment, .menu2__dish--box3 .grouptxt .accompaniment, .menu2__dish--box4 .grouptxt .accompaniment, .menu__dish--box2 .grouptxt .accompaniment, .menu__dish--box3 .grouptxt .accompaniment {
     font-size: 15px;
   }
 }
-.menu__dish--box .price, .menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price, .menu__dish--box2 .price, .menu__dish--box3 .price {
+@media only screen and (min-width: 992px) {
+  .menu__dish--box .grouptxt .accompaniment, .menu2__dish--box .grouptxt .accompaniment, .menu2__dish--box2 .grouptxt .accompaniment, .menu2__dish--box3 .grouptxt .accompaniment, .menu2__dish--box4 .grouptxt .accompaniment, .menu__dish--box2 .grouptxt .accompaniment, .menu__dish--box3 .grouptxt .accompaniment {
+    font-size: 1.1979166667vw;
+    width: 23vw;
+  }
+}
+.menu__dish--box .price, .menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price, .menu2__dish--box4 .price, .menu__dish--box2 .price, .menu__dish--box3 .price {
   font-weight: bold;
   margin-top: 32px;
-  margin-left: 10vw;
-  font-size: 4vw;
+  margin-left: 8vw;
+  font-size: 15px;
 }
 @media screen and (max-width: 365px) {
-  .menu__dish--box .price, .menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price, .menu__dish--box2 .price, .menu__dish--box3 .price {
+  .menu__dish--box .price, .menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price, .menu2__dish--box4 .price, .menu__dish--box2 .price, .menu__dish--box3 .price {
     font-size: 5vw;
     margin-left: 5vw;
   }
 }
 @media screen and (max-width: 240px) {
-  .menu__dish--box .price, .menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price, .menu__dish--box2 .price, .menu__dish--box3 .price {
+  .menu__dish--box .price, .menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price, .menu2__dish--box4 .price, .menu__dish--box2 .price, .menu__dish--box3 .price {
     font-size: 6vw;
     margin-left: 3vw;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 992px) {
-  .menu__dish--box .price, .menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price, .menu__dish--box2 .price, .menu__dish--box3 .price {
+  .menu__dish--box .price, .menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price, .menu2__dish--box4 .price, .menu__dish--box2 .price, .menu__dish--box3 .price {
     margin-left: 8vw;
     font-size: 15px;
   }
 }
 @media only screen and (min-width: 610px) and (max-width: 992px) {
-  .menu__dish--box .price, .menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price, .menu__dish--box2 .price, .menu__dish--box3 .price {
+  .menu__dish--box .price, .menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price, .menu2__dish--box4 .price, .menu__dish--box2 .price, .menu__dish--box3 .price {
     margin-left: 11vw;
   }
 }
-.menu__dish--box .animation, .menu__dish--box .menu2 .price .animation, .menu2 .price .menu__dish--box .animation, .menu2__dish--box .animation, .menu2__dish--box .menu2 .price .animation, .menu2 .price .menu2__dish--box .animation, .menu2__dish--box2 .animation, .menu2__dish--box2 .menu2 .price .animation, .menu2 .price .menu2__dish--box2 .animation, .menu2__dish--box3 .animation, .menu2__dish--box3 .menu2 .price .animation, .menu2 .price .menu2__dish--box3 .animation, .menu__dish--box2 .animation, .menu__dish--box2 .menu2 .price .animation, .menu2 .price .menu__dish--box2 .animation, .menu__dish--box3 .animation, .menu__dish--box3 .menu2 .price .animation, .menu2 .price .menu__dish--box3 .animation {
+@media only screen and (min-width: 992px) {
+  .menu__dish--box .price, .menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price, .menu2__dish--box4 .price, .menu__dish--box2 .price, .menu__dish--box3 .price {
+    font-size: 0.9375vw;
+    margin-top: 3.0208333333vw;
+    margin-left: 0vw;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1715px) {
+  .menu__dish--box .price, .menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price, .menu2__dish--box4 .price, .menu__dish--box2 .price, .menu__dish--box3 .price {
+    margin-top: 40px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1150px) {
+  .menu__dish--box .price, .menu2__dish--box .price, .menu2__dish--box2 .price, .menu2__dish--box3 .price, .menu2__dish--box4 .price, .menu__dish--box2 .price, .menu__dish--box3 .price {
+    margin-left: -5px;
+    font-size: 1vw;
+  }
+}
+.menu__dish--box .animation, .menu__dish--box .menu2 .price .animation, .menu2 .price .menu__dish--box .animation, .menu2__dish--box .animation, .menu2__dish--box .menu2 .price .animation, .menu2 .price .menu2__dish--box .animation, .menu2__dish--box2 .animation, .menu2__dish--box2 .menu2 .price .animation, .menu2 .price .menu2__dish--box2 .animation, .menu2__dish--box3 .animation, .menu2__dish--box3 .menu2 .price .animation, .menu2 .price .menu2__dish--box3 .animation, .menu2__dish--box4 .animation, .menu2__dish--box4 .menu2 .price .animation, .menu2 .price .menu2__dish--box4 .animation, .menu__dish--box2 .animation, .menu__dish--box2 .menu2 .price .animation, .menu2 .price .menu__dish--box2 .animation, .menu__dish--box3 .animation, .menu__dish--box3 .menu2 .price .animation, .menu2 .price .menu__dish--box3 .animation {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: -28px;
 }
 @media only screen and (max-width: 210px) {
-  .menu__dish--box .animation, .menu__dish--box .menu2 .price .animation, .menu2 .price .menu__dish--box .animation, .menu2__dish--box .animation, .menu2__dish--box .menu2 .price .animation, .menu2 .price .menu2__dish--box .animation, .menu2__dish--box2 .animation, .menu2__dish--box2 .menu2 .price .animation, .menu2 .price .menu2__dish--box2 .animation, .menu2__dish--box3 .animation, .menu2__dish--box3 .menu2 .price .animation, .menu2 .price .menu2__dish--box3 .animation, .menu__dish--box2 .animation, .menu__dish--box2 .menu2 .price .animation, .menu2 .price .menu__dish--box2 .animation, .menu__dish--box3 .animation, .menu__dish--box3 .menu2 .price .animation, .menu2 .price .menu__dish--box3 .animation {
+  .menu__dish--box .animation, .menu__dish--box .menu2 .price .animation, .menu2 .price .menu__dish--box .animation, .menu2__dish--box .animation, .menu2__dish--box .menu2 .price .animation, .menu2 .price .menu2__dish--box .animation, .menu2__dish--box2 .animation, .menu2__dish--box2 .menu2 .price .animation, .menu2 .price .menu2__dish--box2 .animation, .menu2__dish--box3 .animation, .menu2__dish--box3 .menu2 .price .animation, .menu2 .price .menu2__dish--box3 .animation, .menu2__dish--box4 .animation, .menu2__dish--box4 .menu2 .price .animation, .menu2 .price .menu2__dish--box4 .animation, .menu__dish--box2 .animation, .menu__dish--box2 .menu2 .price .animation, .menu2 .price .menu__dish--box2 .animation, .menu__dish--box3 .animation, .menu__dish--box3 .menu2 .price .animation, .menu2 .price .menu__dish--box3 .animation {
     margin-right: -35px;
   }
 }
-.menu__dish--box .animation .anim, .menu2__dish--box .animation .anim, .menu2__dish--box2 .animation .anim, .menu2__dish--box3 .animation .anim, .menu__dish--box2 .animation .anim, .menu__dish--box3 .animation .anim {
+.menu__dish--box .animation .anim, .menu2__dish--box .animation .anim, .menu2__dish--box2 .animation .anim, .menu2__dish--box3 .animation .anim, .menu2__dish--box4 .animation .anim, .menu__dish--box2 .animation .anim, .menu__dish--box3 .animation .anim {
   background-color: #99E2D0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -649,7 +829,7 @@ header a {
   justify-content: center;
   align-items: center;
 }
-.menu__dish--box .animation i, .menu__dish--box .menu2 .price .animation i, .menu2 .price .menu__dish--box .animation i, .menu2__dish--box .animation i, .menu2__dish--box .menu2 .price .animation i, .menu2 .price .menu2__dish--box .animation i, .menu2__dish--box2 .animation i, .menu2__dish--box2 .menu2 .price .animation i, .menu2 .price .menu2__dish--box2 .animation i, .menu2__dish--box3 .animation i, .menu2__dish--box3 .menu2 .price .animation i, .menu2 .price .menu2__dish--box3 .animation i, .menu__dish--box2 .animation i, .menu__dish--box2 .menu2 .price .animation i, .menu2 .price .menu__dish--box2 .animation i, .menu__dish--box3 .animation i, .menu__dish--box3 .menu2 .price .animation i, .menu2 .price .menu__dish--box3 .animation i {
+.menu__dish--box .animation i, .menu__dish--box .menu2 .price .animation i, .menu2 .price .menu__dish--box .animation i, .menu2__dish--box .animation i, .menu2__dish--box .menu2 .price .animation i, .menu2 .price .menu2__dish--box .animation i, .menu2__dish--box2 .animation i, .menu2__dish--box2 .menu2 .price .animation i, .menu2 .price .menu2__dish--box2 .animation i, .menu2__dish--box3 .animation i, .menu2__dish--box3 .menu2 .price .animation i, .menu2 .price .menu2__dish--box3 .animation i, .menu2__dish--box4 .animation i, .menu2__dish--box4 .menu2 .price .animation i, .menu2 .price .menu2__dish--box4 .animation i, .menu__dish--box2 .animation i, .menu__dish--box2 .menu2 .price .animation i, .menu2 .price .menu__dish--box2 .animation i, .menu__dish--box3 .animation i, .menu__dish--box3 .menu2 .price .animation i, .menu2 .price .menu__dish--box3 .animation i {
   font-size: 25px;
   color: #FFFFFF;
 }
@@ -669,6 +849,12 @@ header a {
     width: 250px;
   }
 }
+@media only screen and (min-width: 992px) {
+  .menu .button, .menu2 .button {
+    width: 250px;
+    margin-top: 50px;
+  }
+}
 .menu .button:hover, .menu2 .button:hover {
   background: linear-gradient(#fe89de, #9f6ae0);
   box-shadow: 0px 5px 10px #888888;
@@ -681,18 +867,114 @@ header a {
   align-items: center;
 }
 
-.menu__dish--box2 {
-  animation: pop 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.25s;
-  animation-fill-mode: forwards;
-}
-
-.menu__dish--box3 {
-  animation: pop 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.4s;
-  animation-fill-mode: forwards;
-}
-
 .menu2 {
-  height: 1220px;
+  height: auto;
 }
+@media only screen and (min-width: 992px) {
+  .menu2__title h2 {
+    font-size: 45px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .menu2__dish--title {
+    font-size: 25px;
+  }
+}
+@media only screen and (min-width: 1850px) and (max-width: 1920px) {
+  .menu2__dish--box4 {
+    margin-left: 13vw;
+  }
+}
+@media only screen and (min-width: 1800px) and (max-width: 1850px) {
+  .menu2__dish--box4 {
+    margin-left: 13.1vw;
+  }
+}
+@media only screen and (min-width: 1750px) and (max-width: 1800px) {
+  .menu2__dish--box4 {
+    margin-left: 13.2vw;
+  }
+}
+@media only screen and (min-width: 1700px) and (max-width: 1750px) {
+  .menu2__dish--box4 {
+    margin-left: 13.3vw;
+  }
+}
+@media only screen and (min-width: 1650px) and (max-width: 1700px) {
+  .menu2__dish--box4 {
+    margin-left: 13.4vw;
+  }
+}
+@media only screen and (min-width: 1600px) and (max-width: 1650px) {
+  .menu2__dish--box4 {
+    margin-left: 13.5vw;
+  }
+}
+@media only screen and (min-width: 1550px) and (max-width: 1600px) {
+  .menu2__dish--box4 {
+    margin-left: 13.6vw;
+  }
+}
+@media only screen and (min-width: 1500px) and (max-width: 1550px) {
+  .menu2__dish--box4 {
+    margin-left: 13.7vw;
+  }
+}
+@media only screen and (min-width: 1450px) and (max-width: 1500px) {
+  .menu2__dish--box4 {
+    margin-left: 13.9vw;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1450px) {
+  .menu2__dish--box4 {
+    margin-left: 14.2vw;
+  }
+}
+@media only screen and (min-width: 1350px) and (max-width: 1400px) {
+  .menu2__dish--box4 {
+    margin-left: 14.5vw;
+  }
+}
+@media only screen and (min-width: 1300px) and (max-width: 1350px) {
+  .menu2__dish--box4 {
+    margin-left: 14.7vw;
+  }
+}
+@media only screen and (min-width: 1250px) and (max-width: 1300px) {
+  .menu2__dish--box4 {
+    margin-left: 15vw;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1250px) {
+  .menu2__dish--box4 {
+    margin-left: 15.2vw;
+  }
+}
+@media only screen and (min-width: 1150px) and (max-width: 1200px) {
+  .menu2__dish--box4 {
+    margin-left: 15.6vw;
+  }
+}
+@media only screen and (min-width: 1080px) and (max-width: 1150px) {
+  .menu2__dish--box4 {
+    margin-left: 15.8vw;
+  }
+}
+@media only screen and (min-width: 1050px) and (max-width: 1080px) {
+  .menu2__dish--box4 {
+    margin-left: 16.4vw;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1050px) {
+  .menu2__dish--box4 {
+    margin-left: 16.5vw;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1020px) {
+  .menu2__dish--box4 {
+    margin-left: 16.6vw;
+  }
+}
+/*Deuxieme type de menu comprenant un met de plus*/
 
 /*# sourceMappingURL=menu.css.map */

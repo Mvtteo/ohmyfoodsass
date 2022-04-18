@@ -1,0 +1,64 @@
+.heart{
+    position: relative;
+    height: 6vw;
+    width: 6vw;
+    @media only screen and (min-width: 993px){
+        height: 1.2vw;
+        width: 1.2vw;
+    }
+    &:hover .fullheart{
+        animation: fill 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
+        transform-origin: bottom;
+        animation-fill-mode: backwards;
+    }
+    &:hover .empty{
+        animation: void 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
+    }
+    .fullheart{
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 6vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @media only screen and (min-width: 993px){
+            font-size: 1.2vw;
+        }
+        i{
+            background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .empty {
+        width: 100%;
+        height: 100%;
+        font-size: 6vw;
+        z-index: 1;
+        @media only screen and (min-width: 993px){
+            font-size: 1.2vw;
+        }  
+    }
+}
+
+
+.lds-dual-ring {
+    width: 80px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: hide 0s ease-in 2.5s;
+    animation-fill-mode: forwards;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 6px solid #9356DC;
+    border-color: #9356DC transparent #9356DC transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}

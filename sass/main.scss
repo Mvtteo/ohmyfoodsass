@@ -82,10 +82,14 @@ a{
         color: black;
         font-family: roboto;
         width: 36vw;
+        &::placeholder{
+            color: black;
+            opacity: 1;
+        }
         @media only screen and (min-width: 993px){
             margin-left: 1vw;
             font-size: 1vw;
-            width: 6.777893639207508vw;
+            width: 7.5vw;
         }
     }
 }
@@ -466,6 +470,7 @@ a{
                     h6{
                         margin-bottom: 0px;
                         font-size: 1vw;
+                        font-weight: 100;
                     }
                 }
                 &--box, &--box2, &--box3, &--box4{
@@ -618,18 +623,16 @@ a{
 //Partie la plus chargée du site avec tous les vignettes des restaurants renvoyant vers les autres
 //pages html ainsi que le menu uniquement disponible sur la version ordinateur et les animations
 
-@media only screen and (min-width: 993px){
-    .footer{
-        height: 8.5vw;
-    }
-}
-
 li a{
     color: $white;
+    pointer-events: all;
 }
 
 footer{
     animation: nothing 2.5s;  
+    .footer__logo{
+        margin-top: 15px;
+    }
 }
 
-//Paramètres spécifiques à la page pour le footer
+/*Paramètres spécifiques à la page pour le footer*/
