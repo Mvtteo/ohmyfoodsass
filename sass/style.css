@@ -691,7 +691,7 @@
   height: 6vw;
   width: 6vw;
 }
-.heart:active .fullheart {
+.heart:focus .fullheart {
   -webkit-animation: fill 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.1s;
           animation: fill 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.1s;
   -webkit-transform-origin: bottom;
@@ -700,7 +700,7 @@
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
-.heart:active .empty {
+.heart:focus .empty {
   -webkit-animation: void 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.1s;
           animation: void 2s cubic-bezier(0.26, 0.96, 0.42, 1.01) 0.1s;
 }

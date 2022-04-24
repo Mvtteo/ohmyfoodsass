@@ -2,12 +2,12 @@
     position: relative;
     height: 6vw;
     width: 6vw;
-    &:active .fullheart{
+    &:focus .fullheart{
         animation: fill 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
         transform-origin: bottom;
         animation-fill-mode: backwards;
     }
-    &:active .empty{
+    &:focus .empty{
         animation: void 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
     }
     @media only screen and (min-width: 993px){
