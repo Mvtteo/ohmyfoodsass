@@ -1,11 +1,14 @@
+@import './abstracts/fonctions';
+@import './abstracts/keyframes';
+@import './abstracts/mixins';
+@import './abstracts/placeholders';
+@import './abstracts/variables';
+@import './layout/header';
+@import './components/button';
+@import './components/button_heart';
+@import './components/loading';
+@import './pages/contact';
 
-
-@import "./abstracts/variables";
-@import "./abstracts/mixins";
-@import "./layout/layouts"; 
-@import "./components/components";
-@import "./abstracts/keyframes";
-@import "./pages/contact";
 
 //liste des imports nécessaires pour le projet
 
@@ -46,7 +49,6 @@ a{
     width: 100%;
     @media only screen and (min-width: 993px){
         pointer-events: none;
-        width: 23%;
         .heart{
             pointer-events: all;
         }
@@ -128,28 +130,6 @@ a{
             font-size: 1.7vw;
             margin-top: 1vw;
             margin-bottom: 0vw;
-            }
-        }
-        .button{
-            margin-top: 2.5vw;
-            background: linear-gradient($secondary, $primary);
-            padding: 5.4vw;
-            border-radius: 500px;
-            box-shadow: 0px 5px 10px $shadow;
-            @media only screen and (min-width: 993px){
-                margin-top: 1vw;
-                padding: 1vw;
-            }
-            &:hover{
-                background: linear-gradient($secondarylight, $primarylight);
-                box-shadow: 0px 5px 10px $darkshadow;
-            }
-            &__txt{
-                font-size: $regularsize;
-                color: white;
-                @media only screen and (min-width: 993px){
-                font-size: 1vw;
-                }
             }
         }
     }
@@ -344,7 +324,7 @@ a{
         margin-right: auto;
         @media only screen and (min-width: 993px){
             height: 14vw;
-            width: 100%;
+            width: 23%;
             margin-left: 0;
             margin-right: 0;
         }
