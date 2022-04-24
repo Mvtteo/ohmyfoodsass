@@ -88,6 +88,9 @@ a{
             color: black;
             opacity: 1;
         }
+        @media only scren and (max-width: 400px){
+            width: 40vw;
+        }
         @media only screen and (min-width: 993px){
             margin-left: 1vw;
             font-size: 1vw;
