@@ -2,25 +2,17 @@
     position: relative;
     height: 6vw;
     width: 6vw;
-    &:focus .fullheart{
+    &:hover .fullheart{
         animation: fill 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
         transform-origin: bottom;
         animation-fill-mode: backwards;
     }
-    &:focus .empty{
+    &:hover .empty{
         animation: void 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
     }
     @media only screen and (min-width: 993px){
         height: 1.2vw;
         width: 1.2vw;
-        &:hover .fullheart{
-            animation: fill 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
-            transform-origin: bottom;
-            animation-fill-mode: backwards;
-        }
-        &:hover .empty{
-            animation: void 2s cubic-bezier(.26,.96,.42,1.01) 0.1s;
-        }
     }
     .fullheart{
         opacity: 0;

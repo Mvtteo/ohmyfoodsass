@@ -87,12 +87,9 @@ a{
         &::placeholder{
             color: black;
             opacity: 1;
-        }
-        ::placeholder{   
-            @media only scren and (max-width: 400px){
-                padding-left: 1px;
-                padding-right: 1px;
-            }
+        }  
+        @media only scren and (max-width: 400px){
+        font-size: 4.5vw;
         }
         @media only screen and (min-width: 993px){
             margin-left: 1vw;
