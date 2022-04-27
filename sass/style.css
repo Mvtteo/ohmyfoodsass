@@ -965,7 +965,7 @@ a {
   color: black;
   opacity: 1;
 }
-@media only scren and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
   #city input {
     font-size: 4.5vw;
   }
