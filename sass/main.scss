@@ -1,7 +1,5 @@
-@import './abstracts/fonctions';
 @import './abstracts/keyframes';
 @import './abstracts/mixins';
-@import './abstracts/placeholders';
 @import './abstracts/variables';
 @import './layout/header';
 @import './components/button';
@@ -28,17 +26,32 @@ section{
 
 
  //header
+
 header{
     width: $fullwidth;
+    height: 16vw;
+    box-shadow: 0px 1px 5px #bbbbbb;
+    margin-top: 0;
+    display: flex;
+    position: relative;
+    animation: nothing 2.5s;
     font-family: 'Shrikhand', cursive;
-}
-
-@media only screen and (min-width: 993px){
-    #boxheader{
-        height: 5vw;
-        h1{
-
-            font-size: 3vw;
+    @media only screen and (min-width: 993px){
+    height: 5vw;
+    }
+        #boxheader{
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
+        font-size: 8vw;
+        height: 100%;
+        width: auto;
+        box-shadow: none;
+        margin-top: 15px;
+        @media only screen and (min-width: 993px){
+        font-size: 3vw;
+        margin-top: 10px;
         }
     }
 }
@@ -113,7 +126,7 @@ a{
     &__content{
         align-items: center;
         @include column;
-        h3{
+        h1{
         font-size: $subtitle;
         font-weight: 900;
         width: 60%;
@@ -123,7 +136,7 @@ a{
             font-size: 2vw;
         }
         }
-        h4{
+        p{
             width: 90%;
             font-size: $regularsize;
             font-weight: 100;
@@ -151,10 +164,14 @@ a{
     @media only screen and (min-width: 993px){
     height: 20vw;
     }
-    h5{
+    h2{
         font-size: $subtitle;
+        margin-top: 11vw;
+        margin-bottom: 11vw;
         @media only screen and (min-width: 993px){
             font-size: 2vw;
+            margin-top: 3vw;
+            margin-bottom: 3vw;
         }
     }
     .pannel{
@@ -288,7 +305,7 @@ a{
         @media only screen and (min-width: 993px){
             height: 90vw;
         }
-    h5{
+    h2{
         font-size: $subtitle;
         width: 90%;
         margin-left: auto;
@@ -450,7 +467,7 @@ a{
                         border: 1px solid $tertiary;
                         width: 40px;
                     }
-                    h6{
+                    h3{
                         margin-bottom: 0px;
                         font-size: 1vw;
                         font-weight: 100;
